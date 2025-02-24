@@ -1,0 +1,33 @@
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1740317455
+button.tres::Theme::6469991934017354739::1740317457::0::1::::<><>::uid://c01xqphdobx04::::res://TrueType (.ttf)/PixeloidSans.ttf<>uid://dholix0b1epxj::::res://Sprites/New Piskel (6) (1).png<>uid://kinj4t2kmnqe::::res://Sprites/New Piskel (6) (2).png<>uid://cgjy1n1q4l6uk::::res://Sprites/New Piskel (6) (1) (1).png
+export_presets.cfg::TextFile::-1::1739948802::0::1::::<><>::
+parallax_background.gd::GDScript::-1::1739527497::0::1::::<>ParallaxBackground<>::
+::res://Scenes/::1740317455
+control.tscn::PackedScene::5335852468534293605::1740317458::0::1::::<><>::res://parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>res://Scripts/clouds.gd<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://coc3k6mmaklio::::res://Scenes/player2.tscn
+disco-boy.tscn::PackedScene::1390900570179621975::1740317452::0::1::::<><>::res://player.gd<>uid://3vrb6hys7ulc::::res://Sprites/Disco-boy.png
+player2.tscn::PackedScene::5761333514870423578::1740317452::0::1::::<><>::res://Scripts/player.gd<>uid://ddivtpdb42vbv::::res://Sprites/Chill girl.png
+player.tscn::PackedScene::962307200113966677::1740317452::0::1::::<><>::res://Scripts/player.gd<>uid://chqqwqko73kuu::::res://Sprites/Sugar girl.png
+StartMenu.tscn::PackedScene::7809339942083972959::1740317457::0::1::::<><>::res://Scripts/start_menu.gd<>res://parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>res://Scripts/clouds.gd<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://byqr7bt04a25k::::res://Sprites/Wood.png<>uid://cygd27c88adfn::::res://button.tres<>uid://t206uenww4ul::::res://Scenes/disco-boy.tscn<>uid://nyfcagt3yhrx::::res://Scenes/player.tscn
+::res://Scripts/::1740317455
+clouds.gd::GDScript::-1::1740314541::0::1::::<>TextureRect<>::
+player.gd::GDScript::-1::1740317424::0::1::::<>Area2D<>::
+start_menu.gd::GDScript::-1::1739975962::0::1::::<>Control<>::
+::res://Sprites/::1740314664
+1.png::CompressedTexture2D::7255875711937322184::1739196851::1740314542::1::::<><>::
+2.png::CompressedTexture2D::8605905838557766926::1739196851::1740314571::1::::<><>::
+3.png::CompressedTexture2D::453150336172772718::1739196851::1740314574::1::::<><>::
+4.png::CompressedTexture2D::4859715181079276644::1739196851::1740314576::1::::<><>::
+Chill girl.png::CompressedTexture2D::7387653383528107411::1740234494::1740314578::1::::<><>::
+Disco-boy.png::CompressedTexture2D::2009675169524367656::1740235497::1740314583::1::::<><>::
+icon.svg::CompressedTexture2D::4190254717427500946::1739021271::1740314654::1::::<><>::
+New Piskel (6) (1) (1).png::CompressedTexture2D::5214058191203512918::1739591549::1740314664::1::::<><>::
+New Piskel (6) (1).png::CompressedTexture2D::7680168665111556211::1739513445::1740314646::1::::<><>::
+New Piskel (6) (2).png::CompressedTexture2D::719210405232955256::1739513449::1740314636::1::::<><>::
+New Piskel (7).png::CompressedTexture2D::3886691767302484268::1739529568::1740314629::1::::<><>::
+Sugar girl.png::CompressedTexture2D::5298204932769174276::1740233637::1740314613::1::::<><>::
+Wood.png::CompressedTexture2D::4105072392402126882::1739526833::1740314624::1::::<><>::
+::res://TrueType (.ttf)/::1739517967
+PixeloidMono.ttf::FontFile::8730975639929717715::1739517966::1739517967::1::::<><>::
+PixeloidSans-Bold.ttf::FontFile::6819619499573037617::1739517966::1739517967::1::::<><>::
+PixeloidSans.ttf::FontFile::6582662142297637715::1739517966::1739517967::1::::<><>::

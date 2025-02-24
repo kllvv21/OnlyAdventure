@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://nyfcagt3yhrx"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_es5xs"]
+[ext_resource type="Texture2D" uid="uid://chqqwqko73kuu" path="res://Sprites/Sugar girl.png" id="2_dbcrg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11i5c"]
+atlas = ExtResource("2_dbcrg")
+region = Rect2(0, 0, 38, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0k0h"]
+atlas = ExtResource("2_dbcrg")
+region = Rect2(38, 0, 38, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mel8a"]
+atlas = ExtResource("2_dbcrg")
+region = Rect2(76, 0, 38, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vymya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11i5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0k0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mel8a")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md7u8"]
+radius = 15.0
+height = 46.0
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_es5xs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vymya")
+animation = &"walk"
+frame_progress = 0.706434
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_md7u8")

@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=3 uid="uid://ciayyfouih3q4"]
+
+[ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_17ixw"]
+[ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="2_bkno7"]
+[ext_resource type="Texture2D" uid="uid://duu1anww13qly" path="res://Sprites/2.png" id="3_b52a2"]
+[ext_resource type="Script" path="res://Scripts/clouds.gd" id="4_osjit"]
+[ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="5_rvqqt"]
+[ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="6_xscy2"]
+[ext_resource type="PackedScene" uid="uid://coc3k6mmaklio" path="res://Scenes/player2.tscn" id="7_vq6aq"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+script = ExtResource("1_17ixw")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(-3, 0)
+motion_scale = Vector2(10, 10)
+motion_mirroring = Vector2(20, 0)
+
+[node name="1" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(849, 231)
+scale = Vector2(21.525, 2.82386)
+texture = ExtResource("2_bkno7")
+
+[node name="CloudsLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(300, 0)
+
+[node name="Clouds" type="TextureRect" parent="ParallaxBackground2/CloudsLayout"]
+offset_left = -4.0
+offset_top = 65.0
+offset_right = 1428.0
+offset_bottom = 241.0
+texture = ExtResource("3_b52a2")
+stretch_mode = 1
+script = ExtResource("4_osjit")
+
+[node name="NearMountainLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2(5, 0)
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(100, 0)
+motion_mirroring = Vector2(300, 0)
+
+[node name="MointainMiddle" type="TextureRect" parent="ParallaxBackground2/NearMountainLayout"]
+offset_left = -15.0
+offset_top = 146.0
+offset_right = 1416.0
+offset_bottom = 322.0
+texture = ExtResource("5_rvqqt")
+stretch_mode = 1
+
+[node name="MountainNear" type="TextureRect" parent="ParallaxBackground2/NearMountainLayout/MointainMiddle"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 21.0
+offset_right = 1434.0
+offset_bottom = 197.0
+texture = ExtResource("5_rvqqt")
+stretch_mode = 1
+
+[node name="FarMountainLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(300, 0)
+
+[node name="MountainFar" type="TextureRect" parent="ParallaxBackground2/FarMountainLayout"]
+offset_left = -10.0
+offset_top = 104.0
+offset_right = 1420.0
+offset_bottom = 280.0
+texture = ExtResource("5_rvqqt")
+stretch_mode = 1
+
+[node name="GrassLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Grass" type="TextureRect" parent="ParallaxBackground2/GrassLayout"]
+offset_left = -10.0
+offset_top = 197.0
+offset_right = 1214.0
+offset_bottom = 373.0
+texture = ExtResource("6_xscy2")
+stretch_mode = 1
+
+[node name="Grass1" type="TextureRect" parent="ParallaxBackground2/GrassLayout/Grass"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 35.0
+offset_right = 1172.0
+offset_bottom = 211.0
+scale = Vector2(1.03154, 0.939624)
+texture = ExtResource("6_xscy2")
+stretch_mode = 1
+
+[node name="Grass2" type="TextureRect" parent="ParallaxBackground2/GrassLayout/Grass/Grass1"]
+layout_mode = 0
+offset_left = -0.969424
+offset_top = 35.1204
+offset_right = 1169.03
+offset_bottom = 211.121
+texture = ExtResource("6_xscy2")
+stretch_mode = 1
+
+[node name="Grass3" type="TextureRect" parent="ParallaxBackground2/GrassLayout/Grass/Grass1/Grass2"]
+layout_mode = 0
+offset_left = 4.84712
+offset_top = 35.1204
+offset_right = 1173.85
+offset_bottom = 211.121
+texture = ExtResource("6_xscy2")
+stretch_mode = 1
+
+[node name="Player" parent="." instance=ExtResource("7_vq6aq")]
+position = Vector2(308, 331)

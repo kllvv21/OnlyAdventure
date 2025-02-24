@@ -1,0 +1,15 @@
+res://player2.tscn
+res://button.tres
+res://player.gd
+res://player.tscn
+res://StartMenu.tscn
+res://control.tscn
+res://disco-boy.tscn
+res://clouds.gd
+res://Scenes/control.tscn
+res://Scenes/StartMenu.tscn
+res://Scenes/player.tscn
+res://Scenes/player2.tscn
+res://Scenes/disco-boy.tscn
+res://Scripts/start_menu.gd
+res://Scripts/player.gd
