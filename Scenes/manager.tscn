@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bp0ofmtvsqkjw"]
+
+[ext_resource type="Script" path="res://Scripts/man.gd" id="1_odqry"]
+[ext_resource type="Texture2D" uid="uid://br4vtkbbu8yv5" path="res://Sprites/iconsx2.png" id="2_kjexd"]
+[ext_resource type="Texture2D" uid="uid://cdp0lqcfm043q" path="res://Sprites/Heart.png" id="2_pgghh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gggjk"]
+atlas = ExtResource("2_pgghh")
+region = Rect2(18, 39, 19, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fs56"]
+atlas = ExtResource("2_kjexd")
+region = Rect2(6, 168, 30, 24)
+
+[node name="Manager" type="Node" node_paths=PackedStringArray("health")]
+script = ExtResource("1_odqry")
+health = [NodePath("CanvasLayer/HBoxContainer/Sprite2D2"), NodePath("CanvasLayer/HBoxContainer/Sprite2D3"), NodePath("CanvasLayer/HBoxContainer/Sprite2D4")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 30.0
+offset_top = 45.0
+offset_right = 91.0
+offset_bottom = 68.0
+size_flags_horizontal = 0
+text = "Coins: 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_right = 94.0
+offset_bottom = 40.0
+scale = Vector2(1.3, 1.3)
+alignment = 1
+
+[node name="Sprite2D2" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_gggjk")
+stretch_mode = 3
+
+[node name="Sprite2D3" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_gggjk")
+stretch_mode = 3
+
+[node name="Sprite2D4" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_gggjk")
+stretch_mode = 3
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = SubResource("AtlasTexture_8fs56")
+stretch_mode = 5

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ciayyfouih3q4"]
+[gd_scene load_steps=12 format=3 uid="uid://ciayyfouih3q4"]
 
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_17ixw"]
 [ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="2_bkno7"]
@@ -6,7 +6,11 @@
 [ext_resource type="Script" path="res://Scripts/clouds.gd" id="4_osjit"]
 [ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="5_rvqqt"]
 [ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="6_xscy2"]
-[ext_resource type="PackedScene" uid="uid://coc3k6mmaklio" path="res://Scenes/player2.tscn" id="7_vq6aq"]
+[ext_resource type="PackedScene" uid="uid://coc3k6mmaklio" path="res://Scenes/chill-girl.tscn" id="7_vq6aq"]
+[ext_resource type="PackedScene" uid="uid://bfvjocku37hhg" path="res://Scenes/static_body_2d.tscn" id="8_utqen"]
+[ext_resource type="PackedScene" uid="uid://ba5nt0lu5utt2" path="res://Scenes/coin.tscn" id="9_cwkru"]
+[ext_resource type="PackedScene" uid="uid://dx6844mmmpcuo" path="res://Scenes/mush_enemy.tscn" id="11_a46eo"]
+[ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="11_tw4j2"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -20,72 +24,87 @@ grow_vertical = 2
 script = ExtResource("1_17ixw")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
-position = Vector2(-3, 0)
-motion_scale = Vector2(10, 10)
-motion_mirroring = Vector2(20, 0)
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(80, 80)
 
-[node name="1" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
-position = Vector2(849, 231)
-scale = Vector2(21.525, 2.82386)
+[node name="1" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer"]
+offset_left = -708.0
+offset_top = -274.0
+offset_right = -532.0
+offset_bottom = -182.0
+scale = Vector2(49.7875, 10.5398)
 texture = ExtResource("2_bkno7")
+expand_mode = 2
+stretch_mode = 1
 
 [node name="CloudsLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
-motion_scale = Vector2(0.1, 0.1)
-motion_mirroring = Vector2(300, 0)
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(80, 0)
 
 [node name="Clouds" type="TextureRect" parent="ParallaxBackground2/CloudsLayout"]
-offset_left = -4.0
-offset_top = 65.0
-offset_right = 1428.0
-offset_bottom = 241.0
+offset_left = -352.0
+offset_top = 52.0
+offset_right = 2840.0
+offset_bottom = 228.0
 texture = ExtResource("3_b52a2")
 stretch_mode = 1
 script = ExtResource("4_osjit")
 
-[node name="NearMountainLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
-position = Vector2(5, 0)
-motion_scale = Vector2(0.5, 0.5)
-motion_offset = Vector2(100, 0)
-motion_mirroring = Vector2(300, 0)
-
-[node name="MointainMiddle" type="TextureRect" parent="ParallaxBackground2/NearMountainLayout"]
-offset_left = -15.0
-offset_top = 146.0
-offset_right = 1416.0
-offset_bottom = 322.0
-texture = ExtResource("5_rvqqt")
-stretch_mode = 1
-
-[node name="MountainNear" type="TextureRect" parent="ParallaxBackground2/NearMountainLayout/MointainMiddle"]
-layout_mode = 0
-offset_left = -3.0
-offset_top = 21.0
-offset_right = 1434.0
-offset_bottom = 197.0
-texture = ExtResource("5_rvqqt")
-stretch_mode = 1
-
 [node name="FarMountainLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(300, 0)
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0, -2)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(80, 0)
 
 [node name="MountainFar" type="TextureRect" parent="ParallaxBackground2/FarMountainLayout"]
-offset_left = -10.0
-offset_top = 104.0
-offset_right = 1420.0
-offset_bottom = 280.0
+offset_left = -356.0
+offset_top = 93.0
+offset_right = 2955.0
+offset_bottom = 269.0
+texture = ExtResource("5_rvqqt")
+stretch_mode = 1
+
+[node name="NearMountainLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(100, 0)
+motion_mirroring = Vector2(80, 0)
+
+[node name="MountainNear" type="TextureRect" parent="ParallaxBackground2/NearMountainLayout"]
+offset_left = -349.0
+offset_top = 173.0
+offset_right = 2707.0
+offset_bottom = 349.0
+texture = ExtResource("5_rvqqt")
+stretch_mode = 1
+
+[node name="MointainMiddle" type="TextureRect" parent="ParallaxBackground2/NearMountainLayout/MountainNear"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -38.0
+offset_right = 3015.0
+offset_bottom = 138.0
 texture = ExtResource("5_rvqqt")
 stretch_mode = 1
 
 [node name="GrassLayout" type="ParallaxLayer" parent="ParallaxBackground2"]
-motion_scale = Vector2(0.6, 0.6)
-motion_mirroring = Vector2(512, 0)
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-4, 6)
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(80, 0)
 
 [node name="Grass" type="TextureRect" parent="ParallaxBackground2/GrassLayout"]
-offset_left = -10.0
-offset_top = 197.0
-offset_right = 1214.0
-offset_bottom = 373.0
+offset_left = -344.0
+offset_top = 199.0
+offset_right = 2744.0
+offset_bottom = 375.0
 texture = ExtResource("6_xscy2")
 stretch_mode = 1
 
@@ -93,7 +112,7 @@ stretch_mode = 1
 layout_mode = 0
 offset_left = -2.0
 offset_top = 35.0
-offset_right = 1172.0
+offset_right = 2782.0
 offset_bottom = 211.0
 scale = Vector2(1.03154, 0.939624)
 texture = ExtResource("6_xscy2")
@@ -101,21 +120,48 @@ stretch_mode = 1
 
 [node name="Grass2" type="TextureRect" parent="ParallaxBackground2/GrassLayout/Grass/Grass1"]
 layout_mode = 0
-offset_left = -0.969424
-offset_top = 35.1204
-offset_right = 1169.03
-offset_bottom = 211.121
+offset_left = -1.0
+offset_top = 35.0
+offset_right = 3231.0
+offset_bottom = 211.0
 texture = ExtResource("6_xscy2")
 stretch_mode = 1
 
 [node name="Grass3" type="TextureRect" parent="ParallaxBackground2/GrassLayout/Grass/Grass1/Grass2"]
 layout_mode = 0
-offset_left = 4.84712
-offset_top = 35.1204
-offset_right = 1173.85
-offset_bottom = 211.121
+offset_left = 5.0
+offset_top = 35.0
+offset_right = 3401.0
+offset_bottom = 211.0
 texture = ExtResource("6_xscy2")
 stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("7_vq6aq")]
-position = Vector2(308, 331)
+position = Vector2(353, 292)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-3, 2)
+zoom = Vector2(1.1, 1.1)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
+[node name="StaticBody2D" parent="." instance=ExtResource("8_utqen")]
+position = Vector2(6, 349)
+
+[node name="Coin4" parent="." instance=ExtResource("9_cwkru")]
+position = Vector2(206, 285)
+
+[node name="Coin3" parent="." instance=ExtResource("9_cwkru")]
+position = Vector2(99, 295)
+
+[node name="Coin2" parent="." instance=ExtResource("9_cwkru")]
+position = Vector2(586, 243)
+
+[node name="Coin" parent="." instance=ExtResource("9_cwkru")]
+position = Vector2(436, 282)
+
+[node name="Manager" parent="." instance=ExtResource("11_tw4j2")]
+unique_name_in_owner = true
+
+[node name="Node2D" parent="." instance=ExtResource("11_a46eo")]
+position = Vector2(72, 294)

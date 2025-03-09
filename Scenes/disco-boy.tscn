@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://t206uenww4ul"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_iiuno"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_dq2q7"]
 [ext_resource type="Texture2D" uid="uid://3vrb6hys7ulc" path="res://Sprites/Disco-boy.png" id="2_2p0xm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rdktw"]
@@ -36,8 +36,8 @@ animations = [{
 radius = 14.0
 height = 46.0
 
-[node name="Player" type="Area2D"]
-script = ExtResource("1_iiuno")
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_dq2q7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vymya")

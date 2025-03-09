@@ -1,4 +1,9 @@
-res://control.tscn::430f2addc7d46b0ec84df349ec3ea70b::1739948321::res://.godot/exported/133200997/export-e66311c87c39ec8c25379305b5ae724b-control.scn
-res://button.tres::688ff12f8cd2d77cc180f67b8566a406::1739948275::res://.godot/exported/133200997/export-44c31bfcb6e02652149602f313201fc6-button.res
-res://StartMenu.tscn::0d365d2891ff16035b6b9e249d872fb5::1739948321::res://.godot/exported/133200997/export-54de3d8680fb67f04b3f8e2686283602-StartMenu.scn
-res://player.tscn::425ed45c6658de4c688df2fd852f14ad::1739948321::res://.godot/exported/133200997/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://button.tres::2f1b9e738cf51d2570571ed039754424::1740639460::res://.godot/exported/133200997/export-44c31bfcb6e02652149602f313201fc6-button.res
+res://Scenes/chill-girl.tscn::1d8c5c4e060d15e0ee7d811cfdbad601::1740642764::res://.godot/exported/133200997/export-668bfa3583a111f8e0f4f319f2562c2f-chill-girl.scn
+res://Scenes/coin.tscn::20a467fed7a62a15c3f2b537c0f2c115::1740642764::res://.godot/exported/133200997/export-cfd538a465b9799b811984d89e43d2b9-coin.scn
+res://Scenes/control.tscn::342a10a7dd9e8d51411e53dcad21ba97::1740642763::res://.godot/exported/133200997/export-1c04490b6a71ef973e9bbc70e601b801-control.scn
+res://Scenes/disco-boy.tscn::024fbb36501643c03a3607c5cb781f87::1740642764::res://.godot/exported/133200997/export-da89193130faccdd780c29cab1e56f7b-disco-boy.scn
+res://Scenes/s.tscn::90a43a0eada7749fc72ec6ae9f1b6700::1740487286::res://.godot/exported/133200997/export-f48b9acbeab6070cddb1a52949e5feda-s.scn
+res://Scenes/StartMenu.tscn::2b155c3a0f378bb4e5e356eb0374ffc8::1740642763::res://.godot/exported/133200997/export-fda30a04a954b100bd34380ecd4a32d2-StartMenu.scn
+res://Scenes/static_body_2d.tscn::89c3280ea2b5f502042e87240e9c941b::1740640808::res://.godot/exported/133200997/export-36e9f5fb46e484fe0ef0e6c6547b6f15-static_body_2d.scn
+res://Scenes/sugar-girl.tscn::db6c1fe85519745095672949241faf6d::1740487286::res://.godot/exported/133200997/export-35d2a37816774da88b51df90b6012b25-sugar-girl.scn
