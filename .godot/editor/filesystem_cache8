@@ -1,23 +1,23 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1741236918
+::res://::1741516357
 button.tres::Theme::6469991934017354739::1741154055::0::1::::<><>::uid://c01xqphdobx04::::res://TrueType (.ttf)/PixeloidSans.ttf<>uid://dholix0b1epxj::::res://Sprites/New Piskel (6) (1).png<>uid://kinj4t2kmnqe::::res://Sprites/New Piskel (6) (2).png<>uid://cgjy1n1q4l6uk::::res://Sprites/New Piskel (6) (1) (1).png
 export_presets.cfg::TextFile::-1::1740642806::0::1::::<><>::
 README.md::TextFile::-1::1740361416::0::1::::<><>::
-::res://Scenes/::1741182325
-chill-girl.tscn::PackedScene::5761333514870423578::1741182188::0::1::::<><>::res://Scripts/player.gd<>uid://ddivtpdb42vbv::::res://Sprites/Chill girl.png
-coin.tscn::PackedScene::2449176598331260845::1741182188::0::1::::<><>::uid://db3opbss7f8pw::::res://Sprites/Coin.png<>res://Scripts/coin.gd<>uid://btqt2ae0b4wrf::::res://Sprites/Collected.png
-control.tscn::PackedScene::5335852468534293605::1741182188::0::1::::<><>::res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>res://Scripts/clouds.gd<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://coc3k6mmaklio::::res://Scenes/chill-girl.tscn<>uid://bfvjocku37hhg::::res://Scenes/static_body_2d.tscn<>uid://ba5nt0lu5utt2::::res://Scenes/coin.tscn<>uid://dx6844mmmpcuo::::res://Scenes/mush_enemy.tscn<>uid://bp0ofmtvsqkjw::::res://Scenes/manager.tscn
+::res://Scenes/::1741236992
+chill-girl.tscn::PackedScene::5761333514870423578::1741236991::0::1::::<><>::res://Scripts/player.gd<>uid://ddivtpdb42vbv::::res://Sprites/Chill girl.png
+coin.tscn::PackedScene::2449176598331260845::1741236991::0::1::::<><>::uid://db3opbss7f8pw::::res://Sprites/Coin.png<>res://Scripts/coin.gd<>uid://btqt2ae0b4wrf::::res://Sprites/Collected.png
+control.tscn::PackedScene::5335852468534293605::1741236991::0::1::::<><>::res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>res://Scripts/clouds.gd<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://coc3k6mmaklio::::res://Scenes/chill-girl.tscn<>uid://bfvjocku37hhg::::res://Scenes/static_body_2d.tscn<>uid://ba5nt0lu5utt2::::res://Scenes/coin.tscn<>uid://dx6844mmmpcuo::::res://Scenes/mush_enemy.tscn<>uid://bp0ofmtvsqkjw::::res://Scenes/manager.tscn
 disco-boy.tscn::PackedScene::1390900570179621975::1740999570::0::1::::<><>::res://Scripts/player.gd<>uid://3vrb6hys7ulc::::res://Sprites/Disco-boy.png
-manager.tscn::PackedScene::3491722409593660528::1741182188::0::1::::<><>::res://Scripts/man.gd<>uid://br4vtkbbu8yv5::::res://Sprites/iconsx2.png<>uid://cdp0lqcfm043q::::res://Sprites/Heart.png
-mush_enemy.tscn::PackedScene::8839658156191097206::1741182325::0::1::::<><>::uid://5c71x3xl8krk::::res://Sprites/Idle (32x32).png<>res://Scripts/mush_enemy.gd<>uid://ce2b1xikhy61n::::res://Sprites/Run (32x32).png<>res://Scripts/HitCharact.gd<>res://Scripts/FollowCharact.gd<>res://Scripts/enemy_move.gd
+manager.tscn::PackedScene::3491722409593660528::1741236991::0::1::::<><>::res://Scripts/man.gd<>uid://br4vtkbbu8yv5::::res://Sprites/iconsx2.png<>uid://cdp0lqcfm043q::::res://Sprites/Heart.png
+mush_enemy.tscn::PackedScene::8839658156191097206::1741236992::0::1::::<><>::uid://5c71x3xl8krk::::res://Sprites/Idle (32x32).png<>res://Scripts/mush_enemy.gd<>uid://ce2b1xikhy61n::::res://Sprites/Run (32x32).png<>res://Scripts/HitCharact.gd<>res://Scripts/FollowCharact.gd<>res://Scripts/enemy_move.gd
 StartMenu.tscn::PackedScene::7809339942083972959::1741154075::0::1::::<><>::res://Scripts/start_menu.gd<>res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>res://Scripts/clouds.gd<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://byqr7bt04a25k::::res://Sprites/Wood.png<>uid://cygd27c88adfn::::res://button.tres
-static_body_2d.tscn::PackedScene::2781288410210221392::1741182189::0::1::::<><>::uid://cgjy1n1q4l6uk::::res://Sprites/New Piskel (6) (1) (1).png
+static_body_2d.tscn::PackedScene::2781288410210221392::1741236992::0::1::::<><>::uid://cgjy1n1q4l6uk::::res://Sprites/New Piskel (6) (1) (1).png
 sugar-girl.tscn::PackedScene::1061050008942677641::1740999571::0::1::::<><>::res://Scripts/player.gd<>uid://chqqwqko73kuu::::res://Sprites/Sugar girl.png
-::res://Scripts/::1741182325
+::res://Scripts/::1741236951
 clouds.gd::GDScript::-1::1740642806::0::1::::<>TextureRect<>::
 coin.gd::GDScript::-1::1740822145::0::1::::<>Area2D<>::
 enemy_move.gd::GDScript::-1::1741182325::0::1::::EnemyMove<>Node<>::
-FollowCharact.gd::GDScript::-1::1741182188::0::1::::FollowTheCharacter<>Node<>::
+FollowCharact.gd::GDScript::-1::1741236951::0::1::::FollowTheCharacter<>Node<>::
 HitCharact.gd::GDScript::-1::1740999844::0::1::::Hit<>Node<>::
 label.gd::GDScript::-1::1740645295::0::1::::<>Label<>::
 man.gd::GDScript::-1::1740821957::0::1::::<>Node<>::
