@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://c01xqphdobx04" path="res://TrueType (.ttf)/PixeloidSans.ttf" id="1_qjfw8"]
 [ext_resource type="Texture2D" uid="uid://dholix0b1epxj" path="res://Sprites/New Piskel (6) (1).png" id="2_mtshb"]
 [ext_resource type="Texture2D" uid="uid://kinj4t2kmnqe" path="res://Sprites/New Piskel (6) (2).png" id="3_qsa3h"]
-[ext_resource type="Texture2D" uid="uid://cgjy1n1q4l6uk" path="res://Sprites/New Piskel (6) (1) (1).png" id="4_0n81v"]
+[ext_resource type="Texture2D" uid="uid://cgjy1n1q4l6uk" path="res://Sprites/Button.png" id="4_0n81v"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wkhwj"]
 texture_margin_top = 2.03051

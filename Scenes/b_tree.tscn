@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://clmgirnlm3s2"]
+
+[ext_resource type="Texture2D" uid="uid://i540o6xve78j" path="res://Sprites/NonSLiced.png" id="1_k2phw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuyc3"]
+atlas = ExtResource("1_k2phw")
+region = Rect2(153, 11, 64, 62)
+
+[node name="Tree" type="Sprite2D"]
+texture = SubResource("AtlasTexture_kuyc3")

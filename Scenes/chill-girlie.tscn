@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1pj5u6fyxswt"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_tiism"]
+[ext_resource type="Texture2D" uid="uid://ddivtpdb42vbv" path="res://Sprites/Chill girl.png" id="2_2iimq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1fve"]
+atlas = ExtResource("2_2iimq")
+region = Rect2(0, 0, 36, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxml0"]
+atlas = ExtResource("2_2iimq")
+region = Rect2(36, 0, 36, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thujt"]
+atlas = ExtResource("2_2iimq")
+region = Rect2(72, 0, 36, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vymya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1fve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxml0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thujt")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md7u8"]
+radius = 19.0
+height = 46.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_tiism")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vymya")
+animation = &"walk"
+frame_progress = 0.706434
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_md7u8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.15, 1.15)
+limit_left = -100
+limit_bottom = 480
+position_smoothing_enabled = true

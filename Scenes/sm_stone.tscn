@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://djsnc40hummbo"]
+
+[ext_resource type="Texture2D" uid="uid://i540o6xve78j" path="res://Sprites/NonSLiced.png" id="1_u52hs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e171j"]
+atlas = ExtResource("1_u52hs")
+region = Rect2(41, 66, 10, 7)
+
+[node name="b_stone" type="Sprite2D"]
+texture = SubResource("AtlasTexture_e171j")

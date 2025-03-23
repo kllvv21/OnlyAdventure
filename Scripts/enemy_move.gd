@@ -12,7 +12,8 @@ class_name EnemyMove extends Node
 var direction = 1
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
+	$"../AnimatedSprite2D".play('run')
 	if not fol.is_follow:
 		if not parent.is_on_floor():
 			parent.velocity.y += GRAVITY

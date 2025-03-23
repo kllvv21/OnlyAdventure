@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdnu0g8emrxgm"]
+
+[ext_resource type="Texture2D" uid="uid://i540o6xve78j" path="res://Sprites/NonSLiced.png" id="1_mr7cq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiqlk"]
+atlas = ExtResource("1_mr7cq")
+region = Rect2(86, 94, 48, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jju6h"]
+size = Vector2(72, 14)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_qiqlk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jju6h")

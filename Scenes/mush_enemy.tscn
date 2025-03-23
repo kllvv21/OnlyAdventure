@@ -1,7 +1,6 @@
-[gd_scene load_steps=41 format=3 uid="uid://dx6844mmmpcuo"]
+[gd_scene load_steps=40 format=3 uid="uid://dx6844mmmpcuo"]
 
 [ext_resource type="Texture2D" uid="uid://5c71x3xl8krk" path="res://Sprites/Idle (32x32).png" id="1_qd2nx"]
-[ext_resource type="Script" path="res://Scripts/mush_enemy.gd" id="1_tvg6q"]
 [ext_resource type="Texture2D" uid="uid://ce2b1xikhy61n" path="res://Sprites/Run (32x32).png" id="2_l40ws"]
 [ext_resource type="Script" path="res://Scripts/HitCharact.gd" id="4_qcs2t"]
 [ext_resource type="Script" path="res://Scripts/FollowCharact.gd" id="5_4u8r3"]
@@ -239,9 +238,8 @@ radius = 94.22
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cpao8"]
 size = Vector2(41, 30)
 
-[node name="Node2D" type="CharacterBody2D"]
+[node name="Mush" type="CharacterBody2D"]
 platform_wall_layers = 1
-script = ExtResource("1_tvg6q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
@@ -277,7 +275,7 @@ JUMP_FORCE = 260
 
 [node name="Move" type="Node" parent="."]
 script = ExtResource("6_qw285")
-SPEED = 100.0
+SPEED = 90.0
 
 [connection signal="body_entered" from="FollowArea" to="FollowTheCharacter" method="_on_follow_area_body_entered"]
 [connection signal="body_entered" from="HitArea" to="HitTheCharacter" method="_on_node_2d_body_entered"]

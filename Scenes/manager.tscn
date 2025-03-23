@@ -1,22 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp0ofmtvsqkjw"]
+[gd_scene load_steps=5 format=3 uid="uid://bp0ofmtvsqkjw"]
 
 [ext_resource type="Script" path="res://Scripts/man.gd" id="1_odqry"]
-[ext_resource type="Texture2D" uid="uid://br4vtkbbu8yv5" path="res://Sprites/iconsx2.png" id="2_kjexd"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://Scenes/joystick.tscn" id="2_la0c7"]
 [ext_resource type="Texture2D" uid="uid://cdp0lqcfm043q" path="res://Sprites/Heart.png" id="2_pgghh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gggjk"]
 atlas = ExtResource("2_pgghh")
 region = Rect2(18, 39, 19, 18)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8fs56"]
-atlas = ExtResource("2_kjexd")
-region = Rect2(6, 168, 30, 24)
-
-[node name="Manager" type="Node" node_paths=PackedStringArray("health")]
+[node name="Manager" type="Control" node_paths=PackedStringArray("health")]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_odqry")
 health = [NodePath("CanvasLayer/HBoxContainer/Sprite2D2"), NodePath("CanvasLayer/HBoxContainer/Sprite2D3"), NodePath("CanvasLayer/HBoxContainer/Sprite2D4")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_scale = 0.001
+
+[node name="Joystick" parent="CanvasLayer" instance=ExtResource("2_la0c7")]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 30.0
@@ -47,9 +48,3 @@ stretch_mode = 3
 layout_mode = 2
 texture = SubResource("AtlasTexture_gggjk")
 stretch_mode = 3
-
-[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
-visible = false
-layout_mode = 2
-texture = SubResource("AtlasTexture_8fs56")
-stretch_mode = 5

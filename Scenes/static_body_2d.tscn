@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfvjocku37hhg"]
-
-[ext_resource type="Texture2D" uid="uid://cgjy1n1q4l6uk" path="res://Sprites/New Piskel (6) (1) (1).png" id="1_sjtwi"]
+[gd_scene load_steps=2 format=3 uid="uid://bfvjocku37hhg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evnfm"]
 size = Vector2(726.5, 79)
@@ -11,31 +9,10 @@ size = Vector2(726.5, 79)
 position = Vector2(1066.75, -62)
 shape = SubResource("RectangleShape2D_evnfm")
 
-[node name="TextureRect" type="TextureRect" parent="CollisionShape2D3"]
-offset_left = -1063.0
-offset_top = 32.0
-offset_right = -339.0
-offset_bottom = 160.0
-texture = ExtResource("1_sjtwi")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(-363, -21)
 shape = SubResource("RectangleShape2D_evnfm")
 
-[node name="TextureRect" type="TextureRect" parent="CollisionShape2D2"]
-offset_left = -361.0
-offset_top = -43.0
-offset_right = 363.0
-offset_bottom = 85.0
-texture = ExtResource("1_sjtwi")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(365, 10)
 shape = SubResource("RectangleShape2D_evnfm")
-
-[node name="TextureRect" type="TextureRect" parent="CollisionShape2D"]
-offset_left = 341.0
-offset_top = -101.0
-offset_right = 1065.0
-offset_bottom = 27.0
-texture = ExtResource("1_sjtwi")

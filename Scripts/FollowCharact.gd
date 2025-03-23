@@ -47,7 +47,7 @@ func is_colliding_with_wall() -> bool:
 	for i in range(parent.get_slide_collision_count()):
 		var collision = parent.get_slide_collision(i)
 		var collider = collision.get_collider()
-		return collider is StaticBody2D  
+		return not(collider is CharacterBody2D)  
 	return false
 	
 func _on_follow_area_body_entered(body: Node2D) -> void:

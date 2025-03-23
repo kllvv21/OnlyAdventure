@@ -3,14 +3,12 @@ class_name Hit extends Node
 @onready var man = get_tree().root.find_child("Manager", true, false)
 @onready var parent: CharacterBody2D = get_parent()
 
-var lives = 3
-
 
 func _on_node_2d_body_entered(body: Node2D) -> void:
-	if (body.name == 'Player'):
+	if body.name == 'Player':
 		var y_delta = parent.position.y - body.position.y
 		var x_delta = body.position.x - parent.position.x
-		if y_delta > 20:
+		if y_delta > 18:
 			parent.queue_free()
 			body.bounce()
 		else:

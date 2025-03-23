@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://coj2m56sggl2o"]
+
+[ext_resource type="Texture2D" uid="uid://i540o6xve78j" path="res://Sprites/NonSLiced.png" id="1_jcefl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btrah"]
+atlas = ExtResource("1_jcefl")
+region = Rect2(17, 43, 27, 14)
+
+[node name="Bush" type="Sprite2D"]
+texture = SubResource("AtlasTexture_btrah")

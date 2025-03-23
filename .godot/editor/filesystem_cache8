@@ -1,51 +1,70 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1741516357
-button.tres::Theme::6469991934017354739::1741154055::0::1::::<><>::uid://c01xqphdobx04::::res://TrueType (.ttf)/PixeloidSans.ttf<>uid://dholix0b1epxj::::res://Sprites/New Piskel (6) (1).png<>uid://kinj4t2kmnqe::::res://Sprites/New Piskel (6) (2).png<>uid://cgjy1n1q4l6uk::::res://Sprites/New Piskel (6) (1) (1).png
-export_presets.cfg::TextFile::-1::1740642806::0::1::::<><>::
-README.md::TextFile::-1::1740361416::0::1::::<><>::
-::res://Scenes/::1741236992
-chill-girl.tscn::PackedScene::5761333514870423578::1741236991::0::1::::<><>::res://Scripts/player.gd<>uid://ddivtpdb42vbv::::res://Sprites/Chill girl.png
-coin.tscn::PackedScene::2449176598331260845::1741236991::0::1::::<><>::uid://db3opbss7f8pw::::res://Sprites/Coin.png<>res://Scripts/coin.gd<>uid://btqt2ae0b4wrf::::res://Sprites/Collected.png
-control.tscn::PackedScene::5335852468534293605::1741236991::0::1::::<><>::res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>res://Scripts/clouds.gd<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://coc3k6mmaklio::::res://Scenes/chill-girl.tscn<>uid://bfvjocku37hhg::::res://Scenes/static_body_2d.tscn<>uid://ba5nt0lu5utt2::::res://Scenes/coin.tscn<>uid://dx6844mmmpcuo::::res://Scenes/mush_enemy.tscn<>uid://bp0ofmtvsqkjw::::res://Scenes/manager.tscn
-disco-boy.tscn::PackedScene::1390900570179621975::1740999570::0::1::::<><>::res://Scripts/player.gd<>uid://3vrb6hys7ulc::::res://Sprites/Disco-boy.png
-manager.tscn::PackedScene::3491722409593660528::1741236991::0::1::::<><>::res://Scripts/man.gd<>uid://br4vtkbbu8yv5::::res://Sprites/iconsx2.png<>uid://cdp0lqcfm043q::::res://Sprites/Heart.png
-mush_enemy.tscn::PackedScene::8839658156191097206::1741236992::0::1::::<><>::uid://5c71x3xl8krk::::res://Sprites/Idle (32x32).png<>res://Scripts/mush_enemy.gd<>uid://ce2b1xikhy61n::::res://Sprites/Run (32x32).png<>res://Scripts/HitCharact.gd<>res://Scripts/FollowCharact.gd<>res://Scripts/enemy_move.gd
-StartMenu.tscn::PackedScene::7809339942083972959::1741154075::0::1::::<><>::res://Scripts/start_menu.gd<>res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>res://Scripts/clouds.gd<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://byqr7bt04a25k::::res://Sprites/Wood.png<>uid://cygd27c88adfn::::res://button.tres
-static_body_2d.tscn::PackedScene::2781288410210221392::1741236992::0::1::::<><>::uid://cgjy1n1q4l6uk::::res://Sprites/New Piskel (6) (1) (1).png
-sugar-girl.tscn::PackedScene::1061050008942677641::1740999571::0::1::::<><>::res://Scripts/player.gd<>uid://chqqwqko73kuu::::res://Sprites/Sugar girl.png
-::res://Scripts/::1741236951
-clouds.gd::GDScript::-1::1740642806::0::1::::<>TextureRect<>::
-coin.gd::GDScript::-1::1740822145::0::1::::<>Area2D<>::
-enemy_move.gd::GDScript::-1::1741182325::0::1::::EnemyMove<>Node<>::
-FollowCharact.gd::GDScript::-1::1741236951::0::1::::FollowTheCharacter<>Node<>::
-HitCharact.gd::GDScript::-1::1740999844::0::1::::Hit<>Node<>::
-label.gd::GDScript::-1::1740645295::0::1::::<>Label<>::
+::res://::1742704081
+button.tres::Theme::6469991934017354739::1742467809::0::1::::<><>::uid://c01xqphdobx04::::res://TrueType (.ttf)/PixeloidSans.ttf<>uid://dholix0b1epxj::::res://Sprites/New Piskel (6) (1).png<>uid://kinj4t2kmnqe::::res://Sprites/New Piskel (6) (2).png<>uid://cgjy1n1q4l6uk::::res://Sprites/Button.png
+export_presets.cfg::TextFile::-1::1742613485::0::1::::<><>::
+README.md::TextFile::-1::1741520208::0::1::::<><>::
+spikes.gd::GDScript::-1::1742704071::0::1::::<>Node<>::
+::res://Scenes/::1742704081
+b_bush.tscn::PackedScene::6085066671090992594::1741930299::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+b_stone.tscn::PackedScene::6986809560620630846::1741930299::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+b_tree.tscn::PackedScene::163825608301690335::1742638329::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+chill-girlie.tscn::PackedScene::6629318093654100319::1742458162::0::1::::<><>::res://Scripts/player.gd<>uid://ddivtpdb42vbv::::res://Sprites/Chill girl.png
+coin.tscn::PackedScene::2449176598331260845::1742640500::0::1::::<><>::uid://db3opbss7f8pw::::res://Sprites/Coin.png<>res://Scripts/coin.gd<>uid://btqt2ae0b4wrf::::res://Sprites/Collected.png
+disco-boy.tscn::PackedScene::1390900570179621975::1742458162::0::1::::<><>::res://Scripts/player.gd<>uid://3vrb6hys7ulc::::res://Sprites/Disco-boy.png
+joystick.tscn::PackedScene::8038149555967335895::1742638329::0::1::::<><>::uid://d3budwj52t1ti::::res://Sprites/Joysticks.png<>res://Scripts/knob.gd
+kill_zone.tscn::PackedScene::7292421736102704199::1742638329::0::1::::<><>::res://Scripts/kill_zone.gd
+level1.tscn::PackedScene::5335852468534293605::1742704027::0::1::::<><>::res://Scripts/levels.gd<>res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://ba5nt0lu5utt2::::res://Scenes/coin.tscn<>uid://bp0ofmtvsqkjw::::res://Scenes/manager.tscn<>uid://bhndin2nhp44b::::res://Scenes/sm_tree.tscn<>uid://dh8ymeu142m8b::::res://Sprites/TilesNonSliced.png<>uid://coj2m56sggl2o::::res://Scenes/sm_bush.tscn<>uid://qk8jfw53ovdo::::res://Sprites/tilemap_packed.png<>uid://csxwfn3wgtw3k::::res://Scenes/b_bush.tscn<>uid://c5o64tbq8d65g::::res://Sprites/nature-paltformer-tileset-16x16.png<>uid://dx6844mmmpcuo::::res://Scenes/mush_enemy.tscn<>uid://c6spy58fxemmg::::res://Scenes/b_stone.tscn<>uid://clmgirnlm3s2::::res://Scenes/b_tree.tscn<>uid://djsnc40hummbo::::res://Scenes/sm_stone.tscn<>uid://c1pj5u6fyxswt::::res://Scenes/chill-girlie.tscn<>uid://db5redmnjnu0n::::res://Scenes/kill_zone.tscn
+level2.tscn::PackedScene::2447287895238080633::1742703950::0::1::::<><>::res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://bp0ofmtvsqkjw::::res://Scenes/manager.tscn<>uid://dh8ymeu142m8b::::res://Sprites/TilesNonSliced.png<>uid://qk8jfw53ovdo::::res://Sprites/tilemap_packed.png<>uid://c5o64tbq8d65g::::res://Sprites/nature-paltformer-tileset-16x16.png<>uid://s8ik83qtnlyl::::res://Sprites/Bubbles.png<>uid://csxwfn3wgtw3k::::res://Scenes/b_bush.tscn<>uid://bdnu0g8emrxgm::::res://Scenes/platform.tscn<>uid://db5redmnjnu0n::::res://Scenes/kill_zone.tscn<>uid://dx0is0r54w51e::::res://Scenes/oneway_bridge.tscn<>uid://ba5nt0lu5utt2::::res://Scenes/coin.tscn<>uid://dx6844mmmpcuo::::res://Scenes/mush_enemy.tscn<>uid://bhndin2nhp44b::::res://Scenes/sm_tree.tscn<>uid://c1pj5u6fyxswt::::res://Scenes/chill-girlie.tscn<>uid://djsnc40hummbo::::res://Scenes/sm_stone.tscn<>uid://clmgirnlm3s2::::res://Scenes/b_tree.tscn<>uid://c6spy58fxemmg::::res://Scenes/b_stone.tscn<>res://Scripts/levels.gd
+level3.tscn::PackedScene::7384513796362673710::1742703949::0::1::::<><>::res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://bp0ofmtvsqkjw::::res://Scenes/manager.tscn<>uid://dh8ymeu142m8b::::res://Sprites/TilesNonSliced.png<>uid://qk8jfw53ovdo::::res://Sprites/tilemap_packed.png<>uid://c5o64tbq8d65g::::res://Sprites/nature-paltformer-tileset-16x16.png<>uid://c1pj5u6fyxswt::::res://Scenes/chill-girlie.tscn<>uid://s8ik83qtnlyl::::res://Sprites/Bubbles.png<>uid://dx6844mmmpcuo::::res://Scenes/mush_enemy.tscn<>uid://ba5nt0lu5utt2::::res://Scenes/coin.tscn<>uid://db5redmnjnu0n::::res://Scenes/kill_zone.tscn<>uid://bdnu0g8emrxgm::::res://Scenes/platform.tscn<>uid://dx0is0r54w51e::::res://Scenes/oneway_bridge.tscn
+manager.tscn::PackedScene::3491722409593660528::1742638329::0::1::::<><>::res://Scripts/man.gd<>uid://dmr0fcamx7t56::::res://Scenes/joystick.tscn<>uid://cdp0lqcfm043q::::res://Sprites/Heart.png
+mush_enemy.tscn::PackedScene::8839658156191097206::1742539510::0::1::::<><>::uid://5c71x3xl8krk::::res://Sprites/Idle (32x32).png<>uid://ce2b1xikhy61n::::res://Sprites/Run (32x32).png<>res://Scripts/HitCharact.gd<>res://Scripts/FollowCharact.gd<>res://Scripts/enemy_move.gd
+oneway_bridge.tscn::PackedScene::8825734119586107632::1742556352::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+oneway_platform.tscn::PackedScene::5660956794203262602::1742539633::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+platform.tscn::PackedScene::2625083476430046268::1742539649::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+sm_bush.tscn::PackedScene::5775726990852293088::1741930298::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+sm_stone.tscn::PackedScene::7828914898030969248::1741930299::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+sm_tree.tscn::PackedScene::2904776662405553431::1742616943::0::1::::<><>::uid://i540o6xve78j::::res://Sprites/NonSLiced.png
+spikes.tscn::PackedScene::56751784040849386::1742704084::0::1::::<><>::res://spikes.gd<>uid://qk8jfw53ovdo::::res://Sprites/tilemap_packed.png
+StartMenu.tscn::PackedScene::7809339942083972959::1741779463::0::1::::<><>::res://Scripts/start_menu.gd<>res://Scripts/parallax_background.gd<>uid://dbm2hic80bl8c::::res://Sprites/1.png<>uid://duu1anww13qly::::res://Sprites/2.png<>uid://gprk4yvih3t7::::res://Sprites/3.png<>uid://cbic2fwv8xdou::::res://Sprites/4.png<>uid://byqr7bt04a25k::::res://Sprites/Wood.png<>uid://cygd27c88adfn::::res://button.tres
+static_body_2d.tscn::PackedScene::2781288410210221392::1741779463::0::1::::<><>::
+sugar-girl.tscn::PackedScene::1061050008942677641::1742525882::0::1::::<><>::res://Scripts/player.gd<>uid://chqqwqko73kuu::::res://Sprites/Sugar girl.png
+::res://Scripts/::1742704011
+coin.gd::GDScript::-1::1742447730::0::1::::<>Area2D<>::
+enemy_move.gd::GDScript::-1::1742447730::0::1::::EnemyMove<>Node<>::
+FollowCharact.gd::GDScript::-1::1741765956::0::1::::FollowTheCharacter<>Node<>::
+HitCharact.gd::GDScript::-1::1742704011::0::1::::Hit<>Node<>::
+kill_zone.gd::GDScript::-1::1742527935::0::1::::<>Area2D<>::
+knob.gd::GDScript::-1::1742540070::0::1::::<>Sprite2D<>::
+levels.gd::GDScript::-1::1742643290::0::1::::<>Control<>::
 man.gd::GDScript::-1::1740821957::0::1::::<>Node<>::
-mush_enemy.gd::GDScript::-1::1741005651::0::1::::<>CharacterBody2D<>::
 parallax_background.gd::GDScript::-1::1740825382::0::1::::<>ParallaxBackground<>::
-player.gd::GDScript::-1::1741004296::0::1::::Player<>CharacterBody2D<>::
-start_menu.gd::GDScript::-1::1740317511::0::1::::<>Control<>::
-::res://Sprites/::1740822263
+player.gd::GDScript::-1::1742457743::0::1::::Player<>CharacterBody2D<>::
+start_menu.gd::GDScript::-1::1742702401::0::1::::<>Control<>::
+::res://Sprites/::1742467347
 1.png::CompressedTexture2D::7255875711937322184::1739196851::1740314542::1::::<><>::
 2.png::CompressedTexture2D::8605905838557766926::1739196851::1740314571::1::::<><>::
 3.png::CompressedTexture2D::453150336172772718::1739196851::1740314574::1::::<><>::
 4.png::CompressedTexture2D::4859715181079276644::1739196851::1740314576::1::::<><>::
+Bubbles.png::CompressedTexture2D::1332029022527696255::1741941451::1741941454::1::::<><>::
+Button.png::CompressedTexture2D::5214058191203512918::1739591549::1742466137::1::::<><>::
 Chill girl.png::CompressedTexture2D::7387653383528107411::1740234494::1740314578::1::::<><>::
 Coin.png::CompressedTexture2D::7288130377828978432::1740486986::1740486987::1::::<><>::
 Collected.png::CompressedTexture2D::3754240603496273207::1740638962::1740639315::1::::<><>::
 Disco-boy.png::CompressedTexture2D::2009675169524367656::1740235497::1740314583::1::::<><>::
-heart.blink.png::CompressedTexture2D::2465806174254594555::1740819272::1740819282::1::::<><>::
 Heart.png::CompressedTexture2D::5015911976870752740::1740819584::1740819594::1::::<><>::
 icon.svg::CompressedTexture2D::4190254717427500946::1739021271::1740314654::1::::<><>::
-icons.png::CompressedTexture2D::3770234219902980860::1740820168::1740820168::1::::<><>::
-iconsx2.png::CompressedTexture2D::3640807494191467376::1740820152::1740820245::1::::<><>::
 Idle (32x32).png::CompressedTexture2D::2111784691411745804::1740735749::1740822263::1::::<><>::
-New Piskel (6) (1) (1).png::CompressedTexture2D::5214058191203512918::1739591549::1740314664::1::::<><>::
+Joysticks.png::CompressedTexture2D::9127834918752177854::1742395337::1742449346::1::::<><>::
+nature-paltformer-tileset-16x16.png::CompressedTexture2D::6909342980142690662::1741767858::1741767858::1::::<><>::
 New Piskel (6) (1).png::CompressedTexture2D::7680168665111556211::1739513445::1740314646::1::::<><>::
 New Piskel (6) (2).png::CompressedTexture2D::719210405232955256::1739513449::1740314636::1::::<><>::
 New Piskel (7).png::CompressedTexture2D::3886691767302484268::1739529568::1740314629::1::::<><>::
+NonSLiced.png::CompressedTexture2D::625248303653014267::1742466690::1742466699::1::::<><>::
+obj_0022_Layer-23.png::CompressedTexture2D::8280644669105961848::1741780875::1741780876::1::::<><>::
 Run (32x32).png::CompressedTexture2D::5109443309792416621::1740735437::1740735445::1::::<><>::
 Sugar girl.png::CompressedTexture2D::5298204932769174276::1740233637::1740314613::1::::<><>::
+tilemap_packed.png::CompressedTexture2D::1145685306659055928::1741774065::1741774065::1::::<><>::
+TilesNonSliced.png::CompressedTexture2D::7720187301993396219::1741764341::1741764347::1::::<><>::
 Wood.png::CompressedTexture2D::4105072392402126882::1739526833::1740314624::1::::<><>::
 ::res://TrueType (.ttf)/::1739517967
 PixeloidMono.ttf::FontFile::8730975639929717715::1739517966::1739517967::1::::<><>::
