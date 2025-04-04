@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1pj5u6fyxswt"]
+[gd_scene load_steps=9 format=3 uid="uid://c1pj5u6fyxswt"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_tiism"]
 [ext_resource type="Texture2D" uid="uid://ddivtpdb42vbv" path="res://Sprites/Chill girl.png" id="2_2iimq"]
+[ext_resource type="PackedScene" uid="uid://doaf2huioe0x1" path="res://Scenes/attack_area.tscn" id="3_vglui"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g1fve"]
 atlas = ExtResource("2_2iimq")
@@ -33,7 +34,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md7u8"]
-radius = 19.0
+radius = 17.0
 height = 46.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -54,3 +55,6 @@ zoom = Vector2(1.15, 1.15)
 limit_left = -100
 limit_bottom = 480
 position_smoothing_enabled = true
+
+[node name="AttackArea" parent="." instance=ExtResource("3_vglui")]
+position = Vector2(26, -4)

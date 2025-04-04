@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://doaf2huioe0x1"]
+
+[ext_resource type="Script" path="res://Scripts/charact_attack.gd" id="1_6x215"]
+[ext_resource type="Texture2D" uid="uid://dn6jfbkcejpm6" path="res://Sprites/Attack_anim.png" id="2_0ny08"]
+[ext_resource type="AudioStream" uid="uid://2ib5emtunf2m" path="res://Audio/attack_audio.mp3" id="3_c8uk8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6gx6"]
+atlas = ExtResource("2_0ny08")
+region = Rect2(0, 0, 17, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idrjj"]
+atlas = ExtResource("2_0ny08")
+region = Rect2(17, 0, 17, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlwwh"]
+atlas = ExtResource("2_0ny08")
+region = Rect2(34, 0, 17, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f1gjw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6gx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idrjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlwwh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8y0pl"]
+size = Vector2(38, 46)
+
+[node name="AttackArea" type="Area2D"]
+monitoring = false
+monitorable = false
+script = ExtResource("1_6x215")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(-8, 12)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_f1gjw")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 4)
+shape = SubResource("RectangleShape2D_8y0pl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+
+[node name="CooldownTimer" type="Timer" parent="."]
+
+[node name="AttackAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_c8uk8")
+volume_db = -10.297
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

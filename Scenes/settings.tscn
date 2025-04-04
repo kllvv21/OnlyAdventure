@@ -1,0 +1,400 @@
+[gd_scene load_steps=27 format=3 uid="uid://df63nv88ilsex"]
+
+[ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_bu4ln"]
+[ext_resource type="Script" path="res://Scripts/settings.gd" id="1_vksaa"]
+[ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="2_g0vt3"]
+[ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="2_to42k"]
+[ext_resource type="Texture2D" uid="uid://duu1anww13qly" path="res://Sprites/2.png" id="3_3swfq"]
+[ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="4_q3uq7"]
+[ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="5_r5v8d"]
+[ext_resource type="FontFile" uid="uid://dwnl5mrqdmtyh" path="res://TrueType (.ttf)/PixeloidMono.ttf" id="6_33ivw"]
+[ext_resource type="Script" path="res://Scripts/audio_settings.gd" id="7_8mhbx"]
+[ext_resource type="Texture2D" uid="uid://byqr7bt04a25k" path="res://Sprites/Wood2x.png" id="9_h41fs"]
+[ext_resource type="Theme" uid="uid://cygd27c88adfn" path="res://Themes/button.tres" id="10_s31wp"]
+[ext_resource type="Texture2D" uid="uid://dmrxvo3pwycbu" path="res://Sprites/toggle_checked.png" id="11_gyf4o"]
+[ext_resource type="Texture2D" uid="uid://cg7dhdw6clord" path="res://Sprites/toggle_unchecked.png" id="12_0l4rp"]
+[ext_resource type="Texture2D" uid="uid://b67rj0gqnjx7s" path="res://Sprites/slider_icon.png" id="13_p6lc2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qac4x"]
+atlas = ExtResource("9_h41fs")
+region = Rect2(182, 54, 24, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sclrx"]
+atlas = ExtResource("9_h41fs")
+region = Rect2(122, 4, 24, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkdxv"]
+atlas = ExtResource("9_h41fs")
+region = Rect2(212, 54, 24, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23mnt"]
+atlas = ExtResource("9_h41fs")
+region = Rect2(212, 54, 24, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkule"]
+atlas = ExtResource("9_h41fs")
+region = Rect2(242, 4, 20, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00xaj"]
+atlas = ExtResource("9_h41fs")
+region = Rect2(32, 54, 24, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkfak"]
+atlas = ExtResource("9_h41fs")
+region = Rect2(182, 4, 24, 36)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0qut"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjvkd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_31vi4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oinxt"]
+bg_color = Color(0.803922, 0.678431, 0.529412, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y86uy"]
+bg_color = Color(0.803922, 0.678431, 0.529412, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vksaa")
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_to42k")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_bu4ln")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(80, 80)
+
+[node name="1" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+offset_left = -708.0
+offset_top = -274.0
+offset_right = -532.0
+offset_bottom = -182.0
+scale = Vector2(49.7875, 10.5398)
+texture = ExtResource("2_g0vt3")
+expand_mode = 2
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="CloudsLayout" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(80, 0)
+
+[node name="WhiteClouds" type="TextureRect" parent="ParallaxBackground/CloudsLayout"]
+texture_filter = 1
+offset_left = -371.0
+offset_top = 105.0
+offset_right = 2838.0
+offset_bottom = 281.0
+texture = ExtResource("3_3swfq")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Clouds" type="TextureRect" parent="ParallaxBackground/CloudsLayout"]
+texture_filter = 1
+offset_left = -352.0
+offset_top = 52.0
+offset_right = 2840.0
+offset_bottom = 228.0
+texture = ExtResource("3_3swfq")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="FarMountainLayout" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0, -2)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(80, 0)
+
+[node name="MountainFar2" type="TextureRect" parent="ParallaxBackground/FarMountainLayout"]
+texture_filter = 1
+offset_left = -360.0
+offset_top = 144.0
+offset_right = 2871.0
+offset_bottom = 320.0
+texture = ExtResource("4_q3uq7")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="MountainFar" type="TextureRect" parent="ParallaxBackground/FarMountainLayout"]
+texture_filter = 1
+offset_left = -356.0
+offset_top = 93.0
+offset_right = 2955.0
+offset_bottom = 269.0
+texture = ExtResource("4_q3uq7")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="NearMountainLayout" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(100, 0)
+motion_mirroring = Vector2(80, 0)
+
+[node name="MountainNear" type="TextureRect" parent="ParallaxBackground/NearMountainLayout"]
+texture_filter = 1
+offset_left = -349.0
+offset_top = 173.0
+offset_right = 2707.0
+offset_bottom = 349.0
+texture = ExtResource("4_q3uq7")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="MointainMiddle" type="TextureRect" parent="ParallaxBackground/NearMountainLayout/MountainNear"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -38.0
+offset_right = 3015.0
+offset_bottom = 138.0
+texture = ExtResource("4_q3uq7")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="GrassLayout" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-4, 6)
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(80, 0)
+
+[node name="Grass" type="TextureRect" parent="ParallaxBackground/GrassLayout"]
+texture_filter = 1
+offset_left = -59.0
+offset_top = 167.0
+offset_right = 2736.0
+offset_bottom = 343.0
+texture = ExtResource("5_r5v8d")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Grass1" type="TextureRect" parent="ParallaxBackground/GrassLayout/Grass"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = 35.0
+offset_right = 2725.0
+offset_bottom = 211.0
+scale = Vector2(1.03154, 0.939624)
+texture = ExtResource("5_r5v8d")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Grass2" type="TextureRect" parent="ParallaxBackground/GrassLayout/Grass/Grass1"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 35.0
+offset_right = 2875.0
+offset_bottom = 211.0
+texture = ExtResource("5_r5v8d")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Grass3" type="TextureRect" parent="ParallaxBackground/GrassLayout/Grass/Grass1/Grass2"]
+layout_mode = 0
+offset_left = -31.0
+offset_top = 35.0
+offset_right = 2913.0
+offset_bottom = 211.0
+texture = ExtResource("5_r5v8d")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Audio" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_8mhbx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -40.5
+offset_right = 57.5
+offset_bottom = 40.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Audio/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="s" type="TextureRect" parent="Audio/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qac4x")
+
+[node name="e" type="TextureRect" parent="Audio/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_sclrx")
+
+[node name="t" type="TextureRect" parent="Audio/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_lkdxv")
+
+[node name="t1" type="TextureRect" parent="Audio/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_23mnt")
+
+[node name="i" type="TextureRect" parent="Audio/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wkule")
+
+[node name="n" type="TextureRect" parent="Audio/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_00xaj")
+
+[node name="g" type="TextureRect" parent="Audio/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_hkfak")
+
+[node name="s2" type="TextureRect" parent="Audio/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_qac4x")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Audio/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ControlButton" type="CheckButton" parent="Audio/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_33ivw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d0qut")
+theme_override_icons/checked = ExtResource("11_gyf4o")
+theme_override_icons/unchecked = ExtResource("12_0l4rp")
+text = "Control"
+
+[node name="ControlButton2" type="CheckButton" parent="Audio/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_33ivw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d0qut")
+theme_override_icons/checked = ExtResource("11_gyf4o")
+theme_override_icons/unchecked = ExtResource("12_0l4rp")
+text = "Control"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SFXButton" type="CheckButton" parent="Audio/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_33ivw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qjvkd")
+theme_override_icons/checked = ExtResource("11_gyf4o")
+theme_override_icons/unchecked = ExtResource("12_0l4rp")
+text = "SFX"
+
+[node name="MusicButton" type="CheckButton" parent="Audio/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_33ivw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_31vi4")
+theme_override_icons/checked = ExtResource("11_gyf4o")
+theme_override_icons/unchecked = ExtResource("12_0l4rp")
+text = "Music"
+
+[node name="Label" type="Label" parent="Audio/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_33ivw")
+text = "Volume"
+
+[node name="HSlider" type="HSlider" parent="Audio/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("13_p6lc2")
+theme_override_icons/grabber_highlight = ExtResource("13_p6lc2")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_oinxt")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_y86uy")
+max_value = 1.0
+step = 0.001
+
+[node name="Button" type="Button" parent="Audio/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_s31wp")
+text = "OK"
+
+[connection signal="pressed" from="Audio/VBoxContainer/HBoxContainer/SFXButton" to="Audio" method="_on_sfx_buttton_pressed"]
+[connection signal="pressed" from="Audio/VBoxContainer/HBoxContainer/MusicButton" to="Audio" method="_on_music_button_pressed"]
+[connection signal="value_changed" from="Audio/VBoxContainer/HSlider" to="Audio" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Audio/VBoxContainer/Button" to="." method="_on_button_pressed"]

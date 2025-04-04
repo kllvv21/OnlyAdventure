@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dji5xngysfmsd"]
+[gd_scene load_steps=21 format=3 uid="uid://dji5xngysfmsd"]
 
 [ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_xerjf"]
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="2_nc104"]
@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://duu1anww13qly" path="res://Sprites/2.png" id="4_d0742"]
 [ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="6_50erj"]
 [ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="7_c12ag"]
-[ext_resource type="Texture2D" uid="uid://byqr7bt04a25k" path="res://Sprites/Wood.png" id="8_uxc3i"]
-[ext_resource type="Theme" uid="uid://cygd27c88adfn" path="res://button.tres" id="9_gm3go"]
+[ext_resource type="Theme" uid="uid://cygd27c88adfn" path="res://Themes/button.tres" id="8_8gke0"]
+[ext_resource type="Texture2D" uid="uid://byqr7bt04a25k" path="res://Sprites/Wood2x.png" id="8_uxc3i"]
+[ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="9_encdy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mulfi"]
 atlas = ExtResource("8_uxc3i")
@@ -64,6 +65,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_xerjf")
 
+[node name="AudioClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_encdy")
+volume_db = -10.0
+bus = &"SFX"
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("2_nc104")
 
@@ -96,6 +102,7 @@ motion_offset = Vector2(100, 0)
 motion_mirroring = Vector2(80, 0)
 
 [node name="MointainMiddle" type="TextureRect" parent="ParallaxBackground/NearMountainLayout"]
+texture_filter = 1
 offset_left = -15.0
 offset_top = 146.0
 offset_right = 1416.0
@@ -104,6 +111,7 @@ texture = ExtResource("6_50erj")
 stretch_mode = 1
 
 [node name="MountainNear" type="TextureRect" parent="ParallaxBackground/NearMountainLayout/MointainMiddle"]
+texture_filter = 1
 layout_mode = 0
 offset_left = -3.0
 offset_top = 21.0
@@ -117,6 +125,7 @@ motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(80, 0)
 
 [node name="MountainFar" type="TextureRect" parent="ParallaxBackground/FarMountainLayout"]
+texture_filter = 1
 offset_left = -10.0
 offset_top = 104.0
 offset_right = 1420.0
@@ -129,6 +138,7 @@ motion_scale = Vector2(0.6, 0.6)
 motion_mirroring = Vector2(80, 0)
 
 [node name="Grass" type="TextureRect" parent="ParallaxBackground/GrassLayout"]
+texture_filter = 1
 offset_left = -10.0
 offset_top = 197.0
 offset_right = 1214.0
@@ -137,6 +147,7 @@ texture = ExtResource("7_c12ag")
 stretch_mode = 1
 
 [node name="Grass1" type="TextureRect" parent="ParallaxBackground/GrassLayout/Grass"]
+texture_filter = 1
 layout_mode = 0
 offset_left = -2.0
 offset_top = 35.0
@@ -252,14 +263,14 @@ texture = SubResource("AtlasTexture_lq6qf")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("9_gm3go")
+theme = ExtResource("8_8gke0")
 text = " Play"
 
 [node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("9_gm3go")
+theme = ExtResource("8_8gke0")
 text = "Settings"
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -267,9 +278,10 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
-theme = ExtResource("9_gm3go")
+theme = ExtResource("8_8gke0")
 text = "Exit     
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

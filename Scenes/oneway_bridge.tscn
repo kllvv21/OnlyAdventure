@@ -9,13 +9,15 @@ region = Rect2(86, 110, 56, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jju6h"]
 size = Vector2(84, 3)
 
-[node name="OneWayPlatform" type="AnimatableBody2D"]
+[node name="OneWayBridge" type="AnimatableBody2D"]
+z_index = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 texture = SubResource("AtlasTexture_qiqlk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
 position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_jju6h")
 one_way_collision = true

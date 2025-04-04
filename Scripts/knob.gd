@@ -34,3 +34,6 @@ func _input(event):
 func _process(delta: float) -> void:
 	if not is_pressed:
 		global_position = lerp(global_position, parent.global_position, delta * 8)
+
+func is_touch_in_joystick_area(touch_pos: Vector2) -> bool:
+	return global_position.distance_to(touch_pos) <= MaxLen

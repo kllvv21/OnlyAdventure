@@ -7,4 +7,5 @@ atlas = ExtResource("1_u52hs")
 region = Rect2(41, 66, 10, 7)
 
 [node name="b_stone" type="Sprite2D"]
+z_index = -2
 texture = SubResource("AtlasTexture_e171j")

@@ -1,32 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp0ofmtvsqkjw"]
+[gd_scene load_steps=7 format=3 uid="uid://bp0ofmtvsqkjw"]
 
 [ext_resource type="Script" path="res://Scripts/man.gd" id="1_odqry"]
-[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://Scenes/joystick.tscn" id="2_la0c7"]
 [ext_resource type="Texture2D" uid="uid://cdp0lqcfm043q" path="res://Sprites/Heart.png" id="2_pgghh"]
+[ext_resource type="Texture2D" uid="uid://db3opbss7f8pw" path="res://Sprites/Coin.png" id="3_deddw"]
+[ext_resource type="FontFile" uid="uid://dwnl5mrqdmtyh" path="res://TrueType (.ttf)/PixeloidMono.ttf" id="4_lcvqv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq23b"]
+atlas = ExtResource("3_deddw")
+region = Rect2(0, 0, 21, 21)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gggjk"]
 atlas = ExtResource("2_pgghh")
 region = Rect2(18, 39, 19, 18)
 
 [node name="Manager" type="Control" node_paths=PackedStringArray("health")]
+z_index = 10
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_odqry")
-health = [NodePath("CanvasLayer/HBoxContainer/Sprite2D2"), NodePath("CanvasLayer/HBoxContainer/Sprite2D3"), NodePath("CanvasLayer/HBoxContainer/Sprite2D4")]
+health = [NodePath("CanvasLayer/HBoxContainer/heart"), NodePath("CanvasLayer/HBoxContainer/heart2"), NodePath("CanvasLayer/HBoxContainer/heart3")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_scale = 0.001
 
-[node name="Joystick" parent="CanvasLayer" instance=ExtResource("2_la0c7")]
-
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 30.0
-offset_top = 45.0
-offset_right = 91.0
-offset_bottom = 68.0
+offset_left = 57.0
+offset_top = 47.0
+offset_right = 133.0
+offset_bottom = 70.0
 size_flags_horizontal = 0
-text = "Coins: 0"
+theme_override_fonts/font = ExtResource("4_lcvqv")
+text = " 0"
 metadata/_edit_use_anchors_ = true
+
+[node name="Coin" type="Sprite2D" parent="CanvasLayer/Label"]
+position = Vector2(-11, 10)
+texture = SubResource("AtlasTexture_qq23b")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 offset_right = 94.0
@@ -34,17 +43,17 @@ offset_bottom = 40.0
 scale = Vector2(1.3, 1.3)
 alignment = 1
 
-[node name="Sprite2D2" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+[node name="heart" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 texture = SubResource("AtlasTexture_gggjk")
 stretch_mode = 3
 
-[node name="Sprite2D3" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+[node name="heart2" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 texture = SubResource("AtlasTexture_gggjk")
 stretch_mode = 3
 
-[node name="Sprite2D4" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+[node name="heart3" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 texture = SubResource("AtlasTexture_gggjk")
 stretch_mode = 3

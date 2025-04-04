@@ -7,4 +7,5 @@ atlas = ExtResource("1_k2phw")
 region = Rect2(153, 11, 64, 62)
 
 [node name="Tree" type="Sprite2D"]
+z_index = -2
 texture = SubResource("AtlasTexture_kuyc3")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://pd8lrpmbeyjh"]
+[gd_scene load_steps=9 format=3 uid="uid://pd8lrpmbeyjh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_feolk"]
 [ext_resource type="Texture2D" uid="uid://chqqwqko73kuu" path="res://Sprites/Sugar girl.png" id="2_tkgn1"]
+[ext_resource type="PackedScene" uid="uid://doaf2huioe0x1" path="res://Scenes/attack_area.tscn" id="3_kpqbc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11i5c"]
 atlas = ExtResource("2_tkgn1")
@@ -55,3 +56,6 @@ zoom = Vector2(1.15, 1.15)
 limit_left = -100
 limit_bottom = 480
 position_smoothing_enabled = true
+
+[node name="AttackArea" parent="." instance=ExtResource("3_kpqbc")]
+position = Vector2(26, -4)

@@ -7,4 +7,5 @@ atlas = ExtResource("1_jcefl")
 region = Rect2(17, 43, 27, 14)
 
 [node name="Bush" type="Sprite2D"]
+z_index = -2
 texture = SubResource("AtlasTexture_btrah")

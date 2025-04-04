@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://dn05fktxhvcnh"]
+
+[ext_resource type="Texture2D" uid="uid://cg6liaj6p18ug" path="res://Sprites/trunk.png" id="1_6k2ni"]
+[ext_resource type="Script" path="res://Scripts/trunk.gd" id="1_vyddn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh5vc"]
+atlas = ExtResource("1_6k2ni")
+region = Rect2(0, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl4r7"]
+atlas = ExtResource("1_6k2ni")
+region = Rect2(32, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjm65"]
+atlas = ExtResource("1_6k2ni")
+region = Rect2(64, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2vv6"]
+atlas = ExtResource("1_6k2ni")
+region = Rect2(96, 0, 32, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnmdh"]
+atlas = ExtResource("1_6k2ni")
+region = Rect2(128, 0, 32, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v7384"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh5vc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl4r7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjm65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2vv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnmdh")
+}],
+"loop": false,
+"name": &"openning",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbmk7"]
+size = Vector2(32, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv1yi"]
+size = Vector2(32, 20)
+
+[node name="Trunk" type="RigidBody2D"]
+script = ExtResource("1_vyddn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v7384")
+animation = &"openning"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_xbmk7")
+
+[node name="HitArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_gv1yi")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="HitArea" to="." method="_on_hit_area_area_entered"]
