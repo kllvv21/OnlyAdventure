@@ -1,7 +1,7 @@
 extends Panel
 
 @onready var attackArea = get_node_or_null("/root/MainMenu/Player/AttackArea") as CharacterAttack
-@onready var joystick = get_node_or_null("/root/MainMenu/Control/CanvasLayer/Joystick/Knob")
+@onready var joystick = get_node_or_null("/root/MainMenu/GameControl/CanvasLayer/Joystick/Knob")
 
 var valid_attack_touches = {}
 

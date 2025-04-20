@@ -4,6 +4,7 @@ var coins = 0
 var lives = 3
 
 @onready var lab = $CanvasLayer/Label
+var shield
 @export var health : Array[Node]
 
 func decrease_health():
@@ -32,3 +33,12 @@ func add_coin():
 func increase_coins():
 	coins += 5
 	lab.text = ' ' + str(coins)
+
+func show_shield():
+	$CanvasLayer/Protection.show()
+	print("Защита")
+
+func hide_shield():
+	$CanvasLayer/Protection.hide()
+	#pass
+	

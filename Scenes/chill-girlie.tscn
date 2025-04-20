@@ -41,6 +41,7 @@ height = 46.0
 script = ExtResource("1_tiism")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(0.879481, 0.836645, 0.907237, 1)
 sprite_frames = SubResource("SpriteFrames_vymya")
 animation = &"walk"
 frame_progress = 0.706434

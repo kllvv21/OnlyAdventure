@@ -8,12 +8,12 @@ func _on_node_2d_body_entered(body: Node2D) -> void:
 	if body.name == 'Player':
 		var y_delta = parent.position.y - body.position.y
 		var x_delta = body.position.x - parent.position.x
-		if y_delta > 18:
+		var jump_threshold = parent.get_node("CollisionShape2D").shape.extents.y * 1.8
+		if y_delta > jump_threshold:  
 			parent.queue_free()
 			body.bounce()
 		else:
-			man.decrease_health()
-			if (x_delta < 0):
-				body.jump_side(-800)
-			else:
-				body.jump_side(800)
+			if  !body.is_protected: 
+				man.decrease_health()
+				var knockback_direction = -1 if x_delta < 0 else 1
+				body.jump_side(800 * knockback_direction)

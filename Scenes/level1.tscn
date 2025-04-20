@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="2_anyjt"]
 [ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="2_ny2pe"]
 [ext_resource type="Texture2D" uid="uid://duu1anww13qly" path="res://Sprites/2.png" id="3_5ioh4"]
+[ext_resource type="PackedScene" uid="uid://df63nv88ilsex" path="res://Scenes/settings.tscn" id="3_big1i"]
 [ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="4_3wg8o"]
 [ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="5_sqi0n"]
 [ext_resource type="PackedScene" uid="uid://ba5nt0lu5utt2" path="res://Scenes/coin.tscn" id="6_ptkp0"]
@@ -23,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://djsnc40hummbo" path="res://Scenes/sm_stone.tscn" id="15_cianu"]
 [ext_resource type="PackedScene" uid="uid://c1pj5u6fyxswt" path="res://Scenes/chill-girlie.tscn" id="19_3b25a"]
 [ext_resource type="PackedScene" uid="uid://db5redmnjnu0n" path="res://Scenes/kill_zone.tscn" id="20_q22q3"]
-[ext_resource type="PackedScene" uid="uid://dn05fktxhvcnh" path="res://Scenes/trunk.tscn" id="24_c0gdu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1xph"]
 texture = ExtResource("8_yrjhg")
@@ -1300,11 +1300,15 @@ metadata/_edit_lock_ = true
 unique_name_in_owner = true
 position = Vector2(8, 226)
 
-[node name="Control" parent="." instance=ExtResource("9_41cfv")]
+[node name="Settings" parent="." instance=ExtResource("3_big1i")]
 layout_mode = 1
 
 [node name="Manager" parent="." instance=ExtResource("7_ymgak")]
 unique_name_in_owner = true
+
+[node name="GameControl" parent="." instance=ExtResource("9_41cfv")]
+unique_name_in_owner = true
+layout_mode = 1
 
 [node name="Pause" parent="." instance=ExtResource("7_q4mbg")]
 layout_mode = 1
@@ -1428,8 +1432,5 @@ position = Vector2(708, 487)
 position = Vector2(2071.5, 291)
 shape = SubResource("RectangleShape2D_q0vi8")
 debug_color = Color(0.897689, 0.222618, 0.567567, 0.937255)
-
-[node name="Trunk" parent="." instance=ExtResource("24_c0gdu")]
-position = Vector2(146, 290)
 
 [connection signal="body_entered" from="EndLevel" to="." method="_on_area_2d_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cm2eyk6h6rna4"]
+[gd_scene load_steps=2 format=3 uid="uid://b4u8qnsjvqp4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evnfm"]
 size = Vector2(726.5, 79)

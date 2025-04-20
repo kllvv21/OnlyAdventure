@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://d3wnvvqftq56o"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_4r2fp"]
+[ext_resource type="Texture2D" uid="uid://mw02tme1hfau" path="res://Sprites/Snowman.png" id="2_dy2ie"]
+[ext_resource type="Script" path="res://Scripts/HitCharact.gd" id="4_oreka"]
+[ext_resource type="Script" path="res://Scripts/FollowCharact.gd" id="5_gjuks"]
+[ext_resource type="Script" path="res://Scripts/enemy_move.gd" id="6_nnkor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f5dt"]
+atlas = ExtResource("2_dy2ie")
+region = Rect2(0, 0, 36, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h12g8"]
+atlas = ExtResource("2_dy2ie")
+region = Rect2(36, 0, 36, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vgbsw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f5dt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h12g8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"run",
+"speed": 24.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vljv"]
+size = Vector2(28, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3w3e"]
+radius = 94.22
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpao8"]
+size = Vector2(34, 34)
+
+[node name="Snowman" type="CharacterBody2D"]
+platform_wall_layers = 1
+script = ExtResource("1_4r2fp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vgbsw")
+animation = &"idle"
+autoplay = "idle"
+speed_scale = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3vljv")
+
+[node name="FollowArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FollowArea"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_i3w3e")
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_cpao8")
+
+[node name="HitTheCharacter" type="Node" parent="."]
+script = ExtResource("4_oreka")
+
+[node name="FollowTheCharacter" type="Node" parent="."]
+script = ExtResource("5_gjuks")
+JUMP_FORCE = 260
+
+[node name="Move" type="Node" parent="."]
+script = ExtResource("6_nnkor")
+SPEED = 90.0
+
+[connection signal="body_entered" from="FollowArea" to="FollowTheCharacter" method="_on_follow_area_body_entered"]
+[connection signal="body_entered" from="HitArea" to="HitTheCharacter" method="_on_node_2d_body_entered"]

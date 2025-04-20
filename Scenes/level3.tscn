@@ -1,6 +1,7 @@
-[gd_scene load_steps=44 format=4 uid="uid://ddhd4mar2p80q"]
+[gd_scene load_steps=46 format=4 uid="uid://ddhd4mar2p80q"]
 
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_8cdu7"]
+[ext_resource type="Script" path="res://Scripts/levels.gd" id="1_hgn0f"]
 [ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="1_m1c3a"]
 [ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="2_gvaaf"]
 [ext_resource type="Texture2D" uid="uid://duu1anww13qly" path="res://Sprites/2.png" id="3_1mdad"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="6_lj7cn"]
 [ext_resource type="Texture2D" uid="uid://dh8ymeu142m8b" path="res://Sprites/TilesNonSliced.png" id="7_2gxww"]
 [ext_resource type="Texture2D" uid="uid://qk8jfw53ovdo" path="res://Sprites/tilemap_packed.png" id="8_w2b0m"]
+[ext_resource type="PackedScene" uid="uid://df63nv88ilsex" path="res://Scenes/settings.tscn" id="9_bq1rk"]
 [ext_resource type="Texture2D" uid="uid://c5o64tbq8d65g" path="res://Sprites/nature-paltformer-tileset-16x16.png" id="9_spnnu"]
 [ext_resource type="PackedScene" uid="uid://e7hci7ku2s12" path="res://Scenes/control.tscn" id="9_uhv4y"]
 [ext_resource type="PackedScene" uid="uid://bhndin2nhp44b" path="res://Scenes/sm_tree.tscn" id="10_m5h2o"]
@@ -1231,6 +1233,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hgn0f")
 
 [node name="AudioClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_m1c3a")
@@ -1392,11 +1395,15 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." instance=ExtResource("15_yox1m")]
 position = Vector2(2, 204)
 
+[node name="Settings" parent="." instance=ExtResource("9_bq1rk")]
+layout_mode = 1
+
 [node name="Manager" parent="." instance=ExtResource("6_lj7cn")]
 unique_name_in_owner = true
 metadata/_edit_lock_ = true
 
-[node name="Control" parent="." instance=ExtResource("9_uhv4y")]
+[node name="GameControl" parent="." instance=ExtResource("9_uhv4y")]
+unique_name_in_owner = true
 layout_mode = 1
 
 [node name="Pause" parent="." instance=ExtResource("23_5ij0l")]
@@ -1513,7 +1520,7 @@ position = Vector2(1685, 92)
 position = Vector2(1208, 331)
 
 [node name="Spikes3" parent="Spikes" instance=ExtResource("16_gubot")]
-position = Vector2(126, 125)
+position = Vector2(122, 124)
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -1591,9 +1598,11 @@ speed_scale = 0.5
 [node name="OneWayPlatform" parent="Platforms" instance=ExtResource("21_2wpcq")]
 position = Vector2(1128, 331)
 
-[node name="EndLevel" type="Area2D" parent="."]
+[node name="EndLevel3" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndLevel"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndLevel3"]
 position = Vector2(3415, 132)
 shape = SubResource("RectangleShape2D_bnywt")
 debug_color = Color(0.897689, 0.222618, 0.567567, 0.937255)
+
+[connection signal="body_entered" from="EndLevel3" to="." method="_on_end_level_3_body_entered"]

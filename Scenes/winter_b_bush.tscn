@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1mmfke7dc88h"]
+
+[ext_resource type="Texture2D" uid="uid://booaqthcoms75" path="res://Sprites/winter_objects.png" id="1_p02cp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de3ai"]
+atlas = ExtResource("1_p02cp")
+region = Rect2(17, 29, 39, 12)
+
+[node name="Winter_b_bush" type="Sprite2D"]
+z_index = -2
+texture = SubResource("AtlasTexture_de3ai")

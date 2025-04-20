@@ -1,8 +1,9 @@
-res://Scenes/trunk.tscn
+res://Scenes/level5.tscn
 res://Themes/button.tres
+res://Scenes/level4.tscn
 res://Scenes/level1.tscn
-res://Scenes/mush_enemy.tscn
-res://Scenes/attack_area.tscn
-res://trunk.gd
-res://Scripts/man.gd
-res://Scripts/player.gd
+res://Scenes/level2.tscn
+res://Scenes/level3.tscn
+res://Scenes/winter_sm_tree.tscn
+res://Scenes/control.tscn
+res://Scripts/start_menu.gd

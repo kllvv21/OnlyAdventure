@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bp0ofmtvsqkjw"]
+[gd_scene load_steps=8 format=3 uid="uid://bp0ofmtvsqkjw"]
 
 [ext_resource type="Script" path="res://Scripts/man.gd" id="1_odqry"]
 [ext_resource type="Texture2D" uid="uid://cdp0lqcfm043q" path="res://Sprites/Heart.png" id="2_pgghh"]
 [ext_resource type="Texture2D" uid="uid://db3opbss7f8pw" path="res://Sprites/Coin.png" id="3_deddw"]
 [ext_resource type="FontFile" uid="uid://dwnl5mrqdmtyh" path="res://TrueType (.ttf)/PixeloidMono.ttf" id="4_lcvqv"]
+[ext_resource type="Texture2D" uid="uid://cy4t26mlg8wg5" path="res://Sprites/protection.png" id="4_lwclq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq23b"]
 atlas = ExtResource("3_deddw")
@@ -22,6 +23,20 @@ health = [NodePath("CanvasLayer/HBoxContainer/heart"), NodePath("CanvasLayer/HBo
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_scale = 0.001
+
+[node name="Protection" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+offset_left = 49.0
+offset_top = -4.0
+offset_right = 144.0
+offset_bottom = 36.0
+scale = Vector2(1.5, 1.5)
+alignment = 1
+
+[node name="Protection" type="TextureRect" parent="CanvasLayer/Protection"]
+layout_mode = 2
+texture = ExtResource("4_lwclq")
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 57.0
