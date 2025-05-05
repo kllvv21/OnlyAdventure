@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://ddhd4mar2p80q"]
+[gd_scene load_steps=47 format=4 uid="uid://ddhd4mar2p80q"]
 
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_8cdu7"]
 [ext_resource type="Script" path="res://Scripts/levels.gd" id="1_hgn0f"]
@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="6_lj7cn"]
 [ext_resource type="Texture2D" uid="uid://dh8ymeu142m8b" path="res://Sprites/TilesNonSliced.png" id="7_2gxww"]
 [ext_resource type="Texture2D" uid="uid://qk8jfw53ovdo" path="res://Sprites/tilemap_packed.png" id="8_w2b0m"]
-[ext_resource type="PackedScene" uid="uid://df63nv88ilsex" path="res://Scenes/settings.tscn" id="9_bq1rk"]
+[ext_resource type="PackedScene" uid="uid://brbm043uaqrl5" path="res://Scenes/settings.tscn" id="9_bq1rk"]
 [ext_resource type="Texture2D" uid="uid://c5o64tbq8d65g" path="res://Sprites/nature-paltformer-tileset-16x16.png" id="9_spnnu"]
-[ext_resource type="PackedScene" uid="uid://e7hci7ku2s12" path="res://Scenes/control.tscn" id="9_uhv4y"]
+[ext_resource type="PackedScene" uid="uid://dgfxgue4bbrht" path="res://Scenes/control.tscn" id="9_uhv4y"]
 [ext_resource type="PackedScene" uid="uid://bhndin2nhp44b" path="res://Scenes/sm_tree.tscn" id="10_m5h2o"]
 [ext_resource type="PackedScene" uid="uid://djsnc40hummbo" path="res://Scenes/sm_stone.tscn" id="11_kvtgp"]
 [ext_resource type="PackedScene" uid="uid://csxwfn3wgtw3k" path="res://Scenes/b_bush.tscn" id="12_c08iu"]
@@ -27,7 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://bdnu0g8emrxgm" path="res://Scenes/platform.tscn" id="20_0fdlq"]
 [ext_resource type="Texture2D" uid="uid://ckdodmllik2if" path="res://Sprites/TilesWINTER.png" id="20_2lkjs"]
 [ext_resource type="PackedScene" uid="uid://dx0is0r54w51e" path="res://Scenes/oneway_bridge.tscn" id="21_2wpcq"]
-[ext_resource type="PackedScene" uid="uid://bqp26pd0fjbo0" path="res://Scenes/pause.tscn" id="23_5ij0l"]
+[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="23_5ij0l"]
+[ext_resource type="PackedScene" uid="uid://bwae3fvao5iet" path="res://Scenes/checkpoint_manager.tscn" id="27_4bpio"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phqrr"]
 texture = ExtResource("7_2gxww")
@@ -1582,6 +1583,9 @@ shape = SubResource("RectangleShape2D_b1j4j")
 
 [node name="KillZone" parent="WorldBoundaries" instance=ExtResource("19_vi16y")]
 position = Vector2(555, 485)
+
+[node name="CheckpointManager" parent="." instance=ExtResource("27_4bpio")]
+unique_name_in_owner = true
 
 [node name="Platforms" type="Node" parent="."]
 

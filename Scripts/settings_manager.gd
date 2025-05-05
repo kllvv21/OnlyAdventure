@@ -33,3 +33,12 @@ func get_setting(key: String, default: Variant = null) -> Variant:
 		return data[key]
 	else:
 		return default
+		
+func reset_settings():
+	var data = {
+		"volume": 0.8,
+		"music_muted": false,
+		"sfx_muted": false,
+		"joystick_position": "left"
+	}
+	save_settings(data)

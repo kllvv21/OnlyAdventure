@@ -22,6 +22,8 @@ buses/default_bus_layout="res://Audio_settings.tres"
 [autoload]
 
 GlobalAudioStreamPlayer="*res://Scenes/audio_stream_player.tscn"
+ProgressManager="*res://Scripts/progress_manager.gd"
+ControlManager="*res://Scripts/control_manager.gd"
 
 [display]
 

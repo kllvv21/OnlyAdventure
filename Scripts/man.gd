@@ -15,6 +15,7 @@ func decrease_health():
 		else:
 			health[h].hide()
 	if lives == 0:
+		ProgressManager.increase_death()
 		get_tree().reload_current_scene()
 
 func increase_health():

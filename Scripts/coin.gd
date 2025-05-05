@@ -1,6 +1,5 @@
 extends Area2D
 
-#@onready var man = %Manager
 @onready var man: Control = %Manager
 
 func _on_body_entered(body: Node2D) -> void:

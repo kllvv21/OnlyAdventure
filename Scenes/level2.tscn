@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://ba4qqebj7pynh"]
+[gd_scene load_steps=55 format=4 uid="uid://ba4qqebj7pynh"]
 
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_h4vpu"]
 [ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="2_3bnxe"]
@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="4_g5w2c"]
 [ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="5_t3oe7"]
 [ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="6_ht872"]
-[ext_resource type="PackedScene" uid="uid://df63nv88ilsex" path="res://Scenes/settings.tscn" id="9_l1iaw"]
-[ext_resource type="PackedScene" uid="uid://e7hci7ku2s12" path="res://Scenes/control.tscn" id="10_5h024"]
+[ext_resource type="PackedScene" uid="uid://brbm043uaqrl5" path="res://Scenes/settings.tscn" id="9_l1iaw"]
+[ext_resource type="PackedScene" uid="uid://dgfxgue4bbrht" path="res://Scenes/control.tscn" id="10_5h024"]
 [ext_resource type="Texture2D" uid="uid://dh8ymeu142m8b" path="res://Sprites/TilesNonSliced.png" id="10_xdyx8"]
 [ext_resource type="Texture2D" uid="uid://qk8jfw53ovdo" path="res://Sprites/tilemap_packed.png" id="11_4t0mk"]
 [ext_resource type="Texture2D" uid="uid://c5o64tbq8d65g" path="res://Sprites/nature-paltformer-tileset-16x16.png" id="12_8ihl4"]
@@ -25,7 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://clmgirnlm3s2" path="res://Scenes/b_tree.tscn" id="20_sqe3g"]
 [ext_resource type="PackedScene" uid="uid://c6spy58fxemmg" path="res://Scenes/b_stone.tscn" id="21_8gohq"]
 [ext_resource type="Script" path="res://Scripts/levels.gd" id="22_lgtyr"]
-[ext_resource type="PackedScene" uid="uid://bqp26pd0fjbo0" path="res://Scenes/pause.tscn" id="23_eap2p"]
+[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="23_eap2p"]
+[ext_resource type="PackedScene" uid="uid://bwae3fvao5iet" path="res://Scenes/checkpoint_manager.tscn" id="27_5l2id"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phqrr"]
 texture = ExtResource("10_xdyx8")
@@ -1968,5 +1969,8 @@ shape = SubResource("RectangleShape2D_b1j4j")
 position = Vector2(2374, 261)
 shape = SubResource("RectangleShape2D_bnywt")
 debug_color = Color(0.897689, 0.222618, 0.567567, 0.937255)
+
+[node name="CheckpointManager" parent="." instance=ExtResource("27_5l2id")]
+unique_name_in_owner = true
 
 [connection signal="body_entered" from="EndLevel" to="." method="_on_end_level_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://claq4j5phn56u"]
+[gd_scene load_steps=51 format=4 uid="uid://c2lb4tbgjchj0"]
 
 [ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="1_3vrov"]
 [ext_resource type="Script" path="res://Scripts/levels.gd" id="1_glkqr"]
@@ -10,23 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="6_5djlg"]
 [ext_resource type="PackedScene" uid="uid://c1pj5u6fyxswt" path="res://Scenes/chill-girlie.tscn" id="7_7a6kr"]
 [ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="8_xnmhi"]
-[ext_resource type="PackedScene" uid="uid://df63nv88ilsex" path="res://Scenes/settings.tscn" id="9_ubq8q"]
-[ext_resource type="PackedScene" uid="uid://e7hci7ku2s12" path="res://Scenes/control.tscn" id="9_vjba2"]
-[ext_resource type="PackedScene" uid="uid://bqp26pd0fjbo0" path="res://Scenes/pause.tscn" id="10_q8mpb"]
-[ext_resource type="PackedScene" uid="uid://yhhcd3jupn2f" path="res://Scenes/winter_b_tree.tscn" id="14_q6dxu"]
-[ext_resource type="PackedScene" uid="uid://ck7mat7sgcdrw" path="res://Scenes/winter_sm_bush.tscn" id="15_kpah7"]
-[ext_resource type="PackedScene" uid="uid://be143jfutdpj4" path="res://Scenes/winter_sm_tree.tscn" id="15_udg21"]
-[ext_resource type="PackedScene" uid="uid://c1mmfke7dc88h" path="res://Scenes/winter_b_bush.tscn" id="16_6ljh1"]
+[ext_resource type="PackedScene" uid="uid://brbm043uaqrl5" path="res://Scenes/settings.tscn" id="9_ubq8q"]
+[ext_resource type="PackedScene" uid="uid://dgfxgue4bbrht" path="res://Scenes/control.tscn" id="9_vjba2"]
+[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="10_q8mpb"]
+[ext_resource type="PackedScene" path="res://Scenes/winter_b_tree.tscn" id="14_q6dxu"]
+[ext_resource type="PackedScene" path="res://Scenes/winter_sm_bush.tscn" id="15_kpah7"]
+[ext_resource type="PackedScene" uid="uid://clbf3cbc520xr" path="res://Scenes/winter_sm_tree.tscn" id="15_udg21"]
+[ext_resource type="PackedScene" path="res://Scenes/winter_b_bush.tscn" id="16_6ljh1"]
 [ext_resource type="PackedScene" uid="uid://dx0is0r54w51e" path="res://Scenes/oneway_bridge.tscn" id="16_wgfrk"]
 [ext_resource type="PackedScene" uid="uid://2qxt16pbidm" path="res://Scenes/spikes.tscn" id="17_4wkw2"]
 [ext_resource type="Texture2D" uid="uid://dh8ymeu142m8b" path="res://Sprites/TilesNonSliced.png" id="17_ri184"]
 [ext_resource type="Texture2D" uid="uid://c5o64tbq8d65g" path="res://Sprites/nature-paltformer-tileset-16x16.png" id="18_4jv8t"]
 [ext_resource type="Texture2D" uid="uid://qk8jfw53ovdo" path="res://Sprites/tilemap_packed.png" id="19_v2jl5"]
-[ext_resource type="PackedScene" uid="uid://d3wnvvqftq56o" path="res://Scenes/snow_enemy.tscn" id="19_ybr4p"]
-[ext_resource type="PackedScene" uid="uid://c223nfw54w28o" path="res://Scenes/ladder_area.tscn" id="21_arnop"]
+[ext_resource type="PackedScene" path="res://Scenes/snow_enemy.tscn" id="19_ybr4p"]
+[ext_resource type="PackedScene" path="res://Scenes/ladder_area.tscn" id="21_arnop"]
 [ext_resource type="PackedScene" uid="uid://ba5nt0lu5utt2" path="res://Scenes/coin.tscn" id="22_86ijh"]
 [ext_resource type="PackedScene" uid="uid://db5redmnjnu0n" path="res://Scenes/kill_zone.tscn" id="23_3pqbx"]
-[ext_resource type="PackedScene" uid="uid://c7b8xywdygxio" path="res://Scenes/ice_area.tscn" id="26_sac6a"]
+[ext_resource type="PackedScene" path="res://Scenes/ice_area.tscn" id="26_sac6a"]
+[ext_resource type="PackedScene" uid="uid://bwae3fvao5iet" path="res://Scenes/checkpoint_manager.tscn" id="28_y1t27"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phqrr"]
 texture = ExtResource("17_ri184")
@@ -2471,5 +2472,8 @@ scale = Vector2(0.079989, 1.15704)
 position = Vector2(4279, 167)
 shape = SubResource("RectangleShape2D_u0653")
 debug_color = Color(0.897689, 0.222618, 0.567567, 0.937255)
+
+[node name="CheckpointManager" parent="." instance=ExtResource("28_y1t27")]
+unique_name_in_owner = true
 
 [connection signal="body_entered" from="EndLevel4" to="." method="_on_end_level_4_body_entered"]

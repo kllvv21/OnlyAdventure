@@ -7,7 +7,7 @@ atlas = ExtResource("1_mr7cq")
 region = Rect2(86, 94, 48, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jju6h"]
-size = Vector2(72, 14)
+size = Vector2(72, 15)
 
 [node name="Platform" type="AnimatableBody2D"]
 
@@ -16,4 +16,5 @@ scale = Vector2(1.5, 1.5)
 texture = SubResource("AtlasTexture_qiqlk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_jju6h")

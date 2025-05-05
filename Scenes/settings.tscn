@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://df63nv88ilsex"]
+[gd_scene load_steps=26 format=3 uid="uid://brbm043uaqrl5"]
 
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_bu4ln"]
 [ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="2_g0vt3"]
@@ -246,7 +246,7 @@ offset_right = 57.5
 offset_bottom = 40.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 17
 alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="SettingsUI/VBoxContainer"]
@@ -387,6 +387,12 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_y86uy")
 max_value = 1.0
 step = 0.001
 
+[node name="ResetButton" type="Button" parent="SettingsUI/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("10_s31wp")
+text = "Reset settings
+"
+
 [node name="Button" type="Button" parent="SettingsUI/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("10_s31wp")
@@ -396,4 +402,5 @@ text = "OK"
 [connection signal="toggled" from="SettingsUI/VBoxContainer/HBoxContainer/SFXButton" to="SettingsUI" method="_on_sfx_button_toggled"]
 [connection signal="toggled" from="SettingsUI/VBoxContainer/HBoxContainer/MusicButton" to="SettingsUI" method="_on_music_button_toggled"]
 [connection signal="value_changed" from="SettingsUI/VBoxContainer/HSlider" to="SettingsUI" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="SettingsUI/VBoxContainer/ResetButton" to="SettingsUI" method="_on_reset_button_pressed"]
 [connection signal="pressed" from="SettingsUI/VBoxContainer/Button" to="SettingsUI" method="_on_button_pressed"]

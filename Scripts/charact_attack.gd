@@ -35,6 +35,7 @@ func attack():
 func _on_body_entered(body: Node2D) -> void:
 	if body is Enemy:
 		body.queue_free()
+		ProgressManager.add_kill()
 	
 
 func _on_timer_timeout() -> void:

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8d48c63g41nx"]
+
+[ext_resource type="Texture2D" uid="uid://bo8pcu7gphp5o" path="res://Sprites/Wall_ground.png" id="1_otp2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jju6h"]
+size = Vector2(10, 68)
+
+[node name="WallGround" type="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jju6h")
+
+[node name="WallGround" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_otp2m")

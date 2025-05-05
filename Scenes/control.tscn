@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://e7hci7ku2s12"]
+[gd_scene load_steps=4 format=3 uid="uid://dgfxgue4bbrht"]
 
-[ext_resource type="Script" path="res://control_manager.gd" id="1_h12be"]
+[ext_resource type="Script" path="res://Scripts/control_manager.gd" id="1_h12be"]
 [ext_resource type="Script" path="res://Scripts/attack_panel.gd" id="1_v2uk3"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://Scenes/joystick.tscn" id="1_yjgid"]
 

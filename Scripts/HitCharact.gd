@@ -9,7 +9,8 @@ func _on_node_2d_body_entered(body: Node2D) -> void:
 		var y_delta = parent.position.y - body.position.y
 		var x_delta = body.position.x - parent.position.x
 		var jump_threshold = parent.get_node("CollisionShape2D").shape.extents.y * 1.8
-		if y_delta > jump_threshold:  
+		if y_delta > jump_threshold:
+			ProgressManager.add_kill()  
 			parent.queue_free()
 			body.bounce()
 		else:
