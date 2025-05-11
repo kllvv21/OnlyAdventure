@@ -8,8 +8,8 @@ var game_data = {
 	"coins": 0,
 	"deaths": 0,
 	"kills": 0,
-	"unlocked_skins": ["default"],
-	"selected_skin": "default"
+	"unlocked_skins": ["Chill Girlie", "Disco Boy"],
+	"selected_skin": "Chill Girlie"
 }
 
 func _ready():
@@ -35,7 +35,7 @@ func load_game():
 	if not loaded_data is Dictionary:
 		return
 	game_data = loaded_data
-	print(game_data)
+	
 
 func reset_progress():
 	game_data = {
@@ -43,8 +43,8 @@ func reset_progress():
 	"coins": 0,
 	"deaths": 0,
 	"kills": 0,
-	"unlocked_skins": ["default"],
-	"selected_skin": "default" 
+	"unlocked_skins": ["Chill Girlie", "Disco Boy"],
+	"selected_skin": "Chill Girlie"
 	}
 	save_data()
 
@@ -59,6 +59,9 @@ func add_coins(amount: int):
 func add_kill():
 	game_data['kills'] += 1
 	save_data()
+	
+func get_kill():
+	return game_data.get("kills", 0)
 
 func get_level():
 	return game_data.get("current_level", 1)
@@ -73,3 +76,18 @@ func increase_death():
 	
 func get_deaths():
 	return game_data.get("deaths", 0)
+	
+func set_skin(skin_name):
+	game_data["selected_skin"] = skin_name
+	save_data()
+
+func get_skin():
+	return game_data.get("selected_skin", 0)
+
+func unlock_skin(skin_name):
+	game_data['unlocked_skins'].push_back(skin_name)
+	save_data()
+
+func is_skin_unlocked(skin_name):
+	return skin_name in game_data['unlocked_skins']
+	

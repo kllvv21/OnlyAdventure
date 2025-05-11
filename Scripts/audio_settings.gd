@@ -57,10 +57,10 @@ func _on_button_pressed() -> void:
 	$"../../Settings/ParallaxBackground".hide()
 	$"../../Settings/SettingsUI".hide()
 
-
 func _on_reset_button_pressed() -> void:
 	ProgressManager.reset_progress()
 	settings_manager.reset_settings()
+	AchievementManager.reset_achievements()
 	
 	var settings = settings_manager.load_settings()
 

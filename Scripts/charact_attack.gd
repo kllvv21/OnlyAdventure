@@ -1,7 +1,7 @@
 class_name CharacterAttack extends Area2D
 
-@onready var timer: Timer = $Timer
-@onready var cooldown_timer: Timer = $CooldownTimer  
+@onready var timer
+@onready var cooldown_timer
 
 var can_attack: bool = true  
 
@@ -9,6 +9,13 @@ func _ready() -> void:
 	hide()
 	monitoring = false
 	monitorable = false
+	timer = Timer.new()
+	cooldown_timer = Timer.new()
+	add_child(timer)
+	add_child(cooldown_timer)
+	timer.timeout.connect(_on_timer_timeout)
+	cooldown_timer.timeout.connect(_on_cooldown_timer_timeout)
+
 
 func _process(_delta: float) -> void:
 	if $"../AnimatedSprite2D".flip_h:
@@ -29,14 +36,16 @@ func attack():
 	monitoring = true
 	monitorable = true
 	$AttackAudio.play()
-	timer.start()
-	cooldown_timer.start() 
+	timer.start(1.0)
+	cooldown_timer.start(1.5) 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Enemy:
 		body.queue_free()
 		ProgressManager.add_kill()
-	
+		if ProgressManager.get_kill() >= 10:
+			AchievementManager.unlock("bloody_murderer")
+
 
 func _on_timer_timeout() -> void:
 	hide()
@@ -45,4 +54,6 @@ func _on_timer_timeout() -> void:
 
 func _on_cooldown_timer_timeout() -> void:
 	can_attack = true
+	
+	
 	

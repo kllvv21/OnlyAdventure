@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://dsk2ww3mkmevu"]
+[gd_scene load_steps=61 format=4 uid="uid://dsk2ww3mkmevu"]
 
 [ext_resource type="Script" path="res://Scripts/levels.gd" id="1_86juo"]
 [ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="2_v5pn2"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://brbm043uaqrl5" path="res://Scenes/settings.tscn" id="9_60op4"]
 [ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="10_n21jm"]
 [ext_resource type="PackedScene" uid="uid://dgfxgue4bbrht" path="res://Scenes/control.tscn" id="11_8kpxq"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="12_riefv"]
+[ext_resource type="PackedScene" uid="uid://8boxysjwmexf" path="res://Scenes/pause.tscn" id="12_riefv"]
 [ext_resource type="PackedScene" uid="uid://clbf3cbc520xr" path="res://Scenes/winter_sm_tree.tscn" id="13_w5gn1"]
 [ext_resource type="PackedScene" path="res://Scenes/winter_sm_bush.tscn" id="14_na5ya"]
 [ext_resource type="PackedScene" path="res://Scenes/winter_b_tree.tscn" id="15_4gjnm"]
@@ -26,7 +26,9 @@
 [ext_resource type="Texture2D" uid="uid://ckdodmllik2if" path="res://Sprites/TilesWINTER.png" id="20_1r3gf"]
 [ext_resource type="PackedScene" path="res://Scenes/snow_enemy.tscn" id="21_l4da1"]
 [ext_resource type="Texture2D" uid="uid://c5o64tbq8d65g" path="res://Sprites/nature-paltformer-tileset-16x16.png" id="21_nluog"]
+[ext_resource type="PackedScene" uid="uid://ba5nt0lu5utt2" path="res://Scenes/coin.tscn" id="22_gduhw"]
 [ext_resource type="Texture2D" uid="uid://qk8jfw53ovdo" path="res://Sprites/tilemap_packed.png" id="22_unv0x"]
+[ext_resource type="PackedScene" path="res://Scenes/trunk.tscn" id="29_jkhr5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phqrr"]
 texture = ExtResource("19_bq7m8")
@@ -2388,7 +2390,8 @@ stretch_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("8_s7pcj")]
-position = Vector2(2, 204)
+visible = false
+position = Vector2(1, 146)
 
 [node name="Settings" parent="." instance=ExtResource("9_60op4")]
 layout_mode = 1
@@ -2525,6 +2528,54 @@ position = Vector2(4775, 192)
 
 [node name="Coins" type="Node" parent="."]
 
+[node name="Coin" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(226, 244)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(307, 244)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(836, 260)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(1337, 177)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(1460, 177)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(1996, 254)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(2072, 254)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(2793, 167)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(3087, 167)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(3367, 167)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(3756, 213)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(4047, 82)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(3898, 8)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(4505, 184)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(4617, 201)
+
+[node name="Coin16" parent="Coins" instance=ExtResource("22_gduhw")]
+position = Vector2(4676, 201)
+
 [node name="WorldBoundaries" type="Node" parent="."]
 
 [node name="WorldBoundary" type="StaticBody2D" parent="WorldBoundaries"]
@@ -2580,12 +2631,18 @@ scale = Vector2(0.226469, -0.432833)
 position = Vector2(1067, 318)
 scale = Vector2(0.206705, 0.341541)
 
-[node name="EndLevel5" type="Area2D" parent="."]
+[node name="EndLevel6" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndLevel5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndLevel6"]
 position = Vector2(5036, 161)
 shape = SubResource("RectangleShape2D_1x5yc")
 debug_color = Color(0.897689, 0.222618, 0.567567, 0.937255)
 
 [node name="CheckpointManager2" parent="." instance=ExtResource("18_knko4")]
 unique_name_in_owner = true
+
+[node name="Trunk" parent="." instance=ExtResource("29_jkhr5")]
+position = Vector2(4147, -30)
+cat_of_loot = 1
+
+[connection signal="body_entered" from="EndLevel6" to="." method="_on_end_level_6_body_entered"]

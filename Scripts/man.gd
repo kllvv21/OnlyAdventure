@@ -17,6 +17,7 @@ func decrease_health():
 	if lives == 0:
 		ProgressManager.increase_death()
 		get_tree().reload_current_scene()
+		AchievementManager.unlock("first_death")
 
 func increase_health():
 	if lives < 3:

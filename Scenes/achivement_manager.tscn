@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://by81k4j8j2bum"]
 
-[ext_resource type="Script" path="res://Scripts/achivement_manager.gd" id="1_2dppj"]
+[ext_resource type="Script" path="res://Scripts/achievement_manager.gd" id="1_2dppj"]
 
 [node name="achivement_manager" type="Node"]
 script = ExtResource("1_2dppj")

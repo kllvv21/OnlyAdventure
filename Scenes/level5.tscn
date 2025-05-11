@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://ci01g12r4f8ay"]
+[gd_scene load_steps=61 format=4 uid="uid://ci01g12r4f8ay"]
 
 [ext_resource type="Script" path="res://Scripts/levels.gd" id="1_0yuqb"]
 [ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="2_iy3mk"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://brbm043uaqrl5" path="res://Scenes/settings.tscn" id="9_gidgy"]
 [ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="10_2o5vf"]
 [ext_resource type="PackedScene" uid="uid://dgfxgue4bbrht" path="res://Scenes/control.tscn" id="11_a43b0"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="12_s31k7"]
+[ext_resource type="PackedScene" uid="uid://8boxysjwmexf" path="res://Scenes/pause.tscn" id="12_s31k7"]
 [ext_resource type="PackedScene" uid="uid://clbf3cbc520xr" path="res://Scenes/winter_sm_tree.tscn" id="13_i6x1o"]
 [ext_resource type="PackedScene" path="res://Scenes/winter_b_tree.tscn" id="14_577dg"]
 [ext_resource type="PackedScene" path="res://Scenes/winter_sm_bush.tscn" id="15_jdip8"]
@@ -23,10 +23,10 @@
 [ext_resource type="PackedScene" path="res://Scenes/trunk.tscn" id="18_olbtn"]
 [ext_resource type="Texture2D" uid="uid://c5o64tbq8d65g" path="res://Sprites/nature-paltformer-tileset-16x16.png" id="19_rfhrf"]
 [ext_resource type="Texture2D" uid="uid://qk8jfw53ovdo" path="res://Sprites/tilemap_packed.png" id="20_n6wbu"]
-[ext_resource type="PackedScene" uid="uid://2qxt16pbidm" path="res://Scenes/spikes.tscn" id="21_8nuxb"]
 [ext_resource type="PackedScene" path="res://Scenes/ice_area.tscn" id="22_iokse"]
 [ext_resource type="PackedScene" path="res://Scenes/snow_enemy.tscn" id="22_y5fw0"]
 [ext_resource type="PackedScene" uid="uid://ba5nt0lu5utt2" path="res://Scenes/coin.tscn" id="23_1g8me"]
+[ext_resource type="Script" path="res://Scripts/spikes.gd" id="23_86wlo"]
 [ext_resource type="PackedScene" uid="uid://db5redmnjnu0n" path="res://Scenes/kill_zone.tscn" id="24_juv2r"]
 [ext_resource type="PackedScene" path="res://Scenes/winter_platform.tscn" id="24_kiwbc"]
 [ext_resource type="PackedScene" uid="uid://dx0is0r54w51e" path="res://Scenes/oneway_bridge.tscn" id="25_b687a"]
@@ -2039,6 +2039,17 @@ sources/1 = SubResource("TileSetAtlasSource_arcao")
 sources/4 = SubResource("TileSetAtlasSource_w5yqa")
 sources/2 = SubResource("TileSetAtlasSource_h35jy")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_timrl"]
+atlas = ExtResource("20_n6wbu")
+region = Rect2(144, 63, 18, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb0ji"]
+atlas = ExtResource("20_n6wbu")
+region = Rect2(144, 63, 18, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vme3g"]
+size = Vector2(202, 8)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b1j4j"]
 size = Vector2(166, 497)
 
@@ -2250,6 +2261,7 @@ stretch_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("8_nqomp")]
+visible = false
 position = Vector2(2, 204)
 
 [node name="Settings" parent="." instance=ExtResource("9_gidgy")]
@@ -2415,23 +2427,78 @@ tile_set = SubResource("TileSet_c3mb7")
 
 [node name="Spikes" type="Node" parent="."]
 
-[node name="Spikes2" parent="Spikes" instance=ExtResource("21_8nuxb")]
+[node name="Spikes2" type="Node2D" parent="Spikes"]
 position = Vector2(1087, 172)
+script = ExtResource("23_86wlo")
 
-[node name="Spikes3" parent="Spikes" instance=ExtResource("21_8nuxb")]
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes2"]
+texture = SubResource("AtlasTexture_timrl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Spikes/Spikes2"]
+position = Vector2(17, 0)
+texture = SubResource("AtlasTexture_cb0ji")
+
+[node name="Area2D" type="Area2D" parent="Spikes/Spikes2"]
+position = Vector2(40, 0)
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Spikes/Spikes2/Area2D"]
+position = Vector2(20, 0)
+shape = SubResource("RectangleShape2D_vme3g")
+
+[node name="Spikes3" type="Node2D" parent="Spikes"]
 position = Vector2(1121, 172)
+script = ExtResource("23_86wlo")
 
-[node name="Spikes4" parent="Spikes" instance=ExtResource("21_8nuxb")]
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes3"]
+texture = SubResource("AtlasTexture_timrl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Spikes/Spikes3"]
+position = Vector2(17, 0)
+texture = SubResource("AtlasTexture_cb0ji")
+
+[node name="Spikes4" type="Node2D" parent="Spikes"]
 position = Vector2(1155, 172)
+script = ExtResource("23_86wlo")
 
-[node name="Spikes5" parent="Spikes" instance=ExtResource("21_8nuxb")]
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes4"]
+texture = SubResource("AtlasTexture_timrl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Spikes/Spikes4"]
+position = Vector2(17, 0)
+texture = SubResource("AtlasTexture_cb0ji")
+
+[node name="Spikes5" type="Node2D" parent="Spikes"]
 position = Vector2(1189, 172)
+script = ExtResource("23_86wlo")
 
-[node name="Spikes6" parent="Spikes" instance=ExtResource("21_8nuxb")]
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes5"]
+texture = SubResource("AtlasTexture_timrl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Spikes/Spikes5"]
+position = Vector2(17, 0)
+texture = SubResource("AtlasTexture_cb0ji")
+
+[node name="Spikes6" type="Node2D" parent="Spikes"]
 position = Vector2(1223, 172)
+script = ExtResource("23_86wlo")
 
-[node name="Spikes" parent="Spikes" instance=ExtResource("21_8nuxb")]
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes6"]
+texture = SubResource("AtlasTexture_timrl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Spikes/Spikes6"]
+position = Vector2(17, 0)
+texture = SubResource("AtlasTexture_cb0ji")
+
+[node name="Spikes" type="Node2D" parent="Spikes"]
 position = Vector2(1053, 172)
+script = ExtResource("23_86wlo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes/Spikes"]
+texture = SubResource("AtlasTexture_timrl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Spikes/Spikes"]
+position = Vector2(17, 0)
+texture = SubResource("AtlasTexture_cb0ji")
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -2555,4 +2622,5 @@ cat_of_loot = 1
 [node name="CheckpointManager" parent="." instance=ExtResource("32_hmteg")]
 unique_name_in_owner = true
 
+[connection signal="body_entered" from="Spikes/Spikes2/Area2D" to="Spikes/Spikes2" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="EndLevel5" to="." method="_on_end_level_5_body_entered"]

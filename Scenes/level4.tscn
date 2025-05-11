@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="8_xnmhi"]
 [ext_resource type="PackedScene" uid="uid://brbm043uaqrl5" path="res://Scenes/settings.tscn" id="9_ubq8q"]
 [ext_resource type="PackedScene" uid="uid://dgfxgue4bbrht" path="res://Scenes/control.tscn" id="9_vjba2"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="10_q8mpb"]
+[ext_resource type="PackedScene" uid="uid://8boxysjwmexf" path="res://Scenes/pause.tscn" id="10_q8mpb"]
 [ext_resource type="PackedScene" path="res://Scenes/winter_b_tree.tscn" id="14_q6dxu"]
 [ext_resource type="PackedScene" path="res://Scenes/winter_sm_bush.tscn" id="15_kpah7"]
 [ext_resource type="PackedScene" uid="uid://clbf3cbc520xr" path="res://Scenes/winter_sm_tree.tscn" id="15_udg21"]
@@ -2225,6 +2225,7 @@ stretch_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("7_7a6kr")]
+visible = false
 position = Vector2(2, 204)
 
 [node name="Settings" parent="." instance=ExtResource("9_ubq8q")]

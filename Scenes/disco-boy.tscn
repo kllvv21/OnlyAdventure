@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_dq2q7"]
 [ext_resource type="Texture2D" uid="uid://3vrb6hys7ulc" path="res://Sprites/Disco-boy.png" id="2_2p0xm"]
-[ext_resource type="PackedScene" uid="uid://doaf2huioe0x1" path="res://Scenes/attack_area.tscn" id="3_jg0rs"]
+[ext_resource type="PackedScene" uid="uid://cpahvfd07w0t3" path="res://Scenes/attack_area.tscn" id="3_jg0rs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rdktw"]
 atlas = ExtResource("2_2p0xm")
@@ -50,6 +50,7 @@ flip_h = true
 shape = SubResource("CapsuleShape2D_md7u8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 zoom = Vector2(1.15, 1.15)
 limit_left = -100
 limit_bottom = 480

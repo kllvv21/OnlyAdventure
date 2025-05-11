@@ -25,10 +25,6 @@ expand_margin_right = 20.0
 expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6h8rj"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
 texture = ExtResource("4_0n81v")
 expand_margin_left = 20.0
 expand_margin_top = 5.0
@@ -42,13 +38,13 @@ texture_margin_right = 20.0
 
 [resource]
 Button/colors/font_color = Color(0.000508633, 0.000160217, 0.000134425, 1)
-Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_disabled_color = Color(0.87451, 0.87451, 0.87451, 0)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 Button/colors/font_hover_color = Color(0.782302, 0.499952, 0.31713, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
-Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0)
 Button/colors/icon_focus_color = Color(1, 1, 1, 1)
 Button/colors/icon_hover_color = Color(1, 1, 1, 1)
 Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)

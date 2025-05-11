@@ -1,20 +1,30 @@
-[gd_scene load_steps=16 format=3 uid="uid://c8ides51s4akk"]
+[gd_scene load_steps=20 format=3 uid="uid://c8ides51s4akk"]
 
+[ext_resource type="Script" path="res://Scripts/menubar.gd" id="1_j5dx7"]
 [ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="1_l3h3s"]
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="2_ieupu"]
 [ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="3_3eiiv"]
 [ext_resource type="Texture2D" uid="uid://duu1anww13qly" path="res://Sprites/2.png" id="4_rmn1a"]
 [ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="5_1kd8m"]
 [ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="6_khixe"]
-[ext_resource type="Script" path="res://Scripts/achivements.gd" id="7_q66ho"]
+[ext_resource type="Script" path="res://Scripts/achievements.gd" id="7_q66ho"]
 [ext_resource type="Texture2D" uid="uid://c515vg3ubg6hg" path="res://Sprites/Skull_wb.png" id="8_uqikp"]
 [ext_resource type="FontFile" uid="uid://c4fqewe0svy0x" path="res://TrueType (.ttf)/PixeloidSans-Bold.ttf" id="9_6wkpv"]
 [ext_resource type="FontFile" uid="uid://dwnl5mrqdmtyh" path="res://TrueType (.ttf)/PixeloidMono.ttf" id="10_f3kgc"]
 [ext_resource type="Texture2D" uid="uid://dq7ihqpnooqu8" path="res://Sprites/Coins_wb.png" id="11_xw6gr"]
-[ext_resource type="Texture2D" uid="uid://dj3snuxiupbw3" path="res://Sprites/hourglass.png" id="12_q3p5f"]
-[ext_resource type="Texture2D" uid="uid://cxgypba08lhk" path="res://Sprites/Sword.png" id="13_noy1t"]
-[ext_resource type="Texture2D" uid="uid://vei20bbg5yb1" path="res://Sprites/Trunk_achivement.png" id="14_ow4el"]
+[ext_resource type="Texture2D" uid="uid://dwix0khh7nllg" path="res://Sprites/hourglass_wb.png" id="12_81y0d"]
+[ext_resource type="Texture2D" uid="uid://oshcwleswdbo" path="res://Sprites/Sword_wb.png" id="13_mcb2i"]
+[ext_resource type="Texture2D" uid="uid://s2fedvg60jdk" path="res://Sprites/Trunk_achivement_wb.png" id="14_3ymrd"]
 [ext_resource type="Texture2D" uid="uid://bf8j5xjeoj1ys" path="res://Sprites/Goblet_wb.png" id="15_mbbfa"]
+[ext_resource type="Theme" uid="uid://cygd27c88adfn" path="res://Themes/button.tres" id="16_pqhyi"]
+[ext_resource type="Texture2D" uid="uid://cgjy1n1q4l6uk" path="res://Sprites/Button.png" id="18_jsm6s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db5u4"]
+texture = ExtResource("18_jsm6s")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -23,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_j5dx7")
 
 [node name="AudioClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_l3h3s")
@@ -184,167 +195,215 @@ metadata/_edit_lock_ = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("7_q66ho")
 
-[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
-alignment = 1
+alignment = 2
 
-[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Skull" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Skull" type="TextureRect" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("8_uqikp")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_6wkpv")
 text = "First Death"
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
+[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_f3kgc")
 text = "Die once by any means"
 
-[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Coins" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Coins" type="TextureRect" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 texture = ExtResource("11_xw6gr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_6wkpv")
 text = "Moneybag"
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_f3kgc")
 text = "Collect 100 gold coins"
 
-[node name="VBoxContainer3" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer3" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Hourglass" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="Hourglass" type="TextureRect" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
-texture = ExtResource("12_q3p5f")
+texture = ExtResource("12_81y0d")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_6wkpv")
 text = "No Time to Waste"
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
+[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_f3kgc")
 text = "Complete any level in 
-less than 30 seconds"
+less than 15 seconds"
 
-[node name="HBoxContainer2" type="VBoxContainer" parent="CanvasLayer/VBoxContainer"]
+[node name="HBoxContainer2" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 30
 alignment = 1
 
-[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer2"]
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Sword" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+[node name="Sword" type="TextureRect" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("13_noy1t")
+texture = ExtResource("13_mcb2i")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_6wkpv")
 text = "Bloody Murderer"
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
+[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_f3kgc")
 text = "Kill any 10 monsters"
 
-[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer2"]
+[node name="VBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Trunk" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="Trunk" type="TextureRect" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("14_ow4el")
+texture = ExtResource("14_3ymrd")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer2/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_6wkpv")
 text = "Great Treasures"
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer2/VBoxContainer"]
+[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_f3kgc")
 text = "Open any chest"
 
-[node name="VBoxContainer3" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer2"]
+[node name="VBoxContainer3" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Goblet" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+[node name="Goblet" type="TextureRect" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer3"]
 layout_mode = 2
 texture = ExtResource("15_mbbfa")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer3"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer3/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer3/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_6wkpv")
 text = "True Legend"
 
-[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer2/VBoxContainer3/VBoxContainer"]
+[node name="RichTextLabel" type="Label" parent="CanvasLayer/VBoxContainer2/VBoxContainer/HBoxContainer2/VBoxContainer3/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_f3kgc")
 text = "Complete all levels
 "
+
+[node name="Menubar" type="HBoxContainer" parent="CanvasLayer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="Menu_button" type="Button" parent="CanvasLayer/VBoxContainer2/Menubar"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("16_pqhyi")
+text = "Back"
+
+[node name="Ach_button" type="Button" parent="CanvasLayer/VBoxContainer2/Menubar"]
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("16_pqhyi")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/disabled = SubResource("StyleBoxTexture_db5u4")
+disabled = true
+text = "Achievements"
+
+[node name="Store_button" type="Button" parent="CanvasLayer/VBoxContainer2/Menubar"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("16_pqhyi")
+text = "Store"
+
+[node name="Level_button" type="Button" parent="CanvasLayer/VBoxContainer2/Menubar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("16_pqhyi")
+text = "Levels
+"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer2/Menubar/Menu_button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer2/Menubar/Ach_button" to="." method="_on_ach_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer2/Menubar/Store_button" to="." method="_on_store_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer2/Menubar/Level_button" to="." method="_on_level_button_pressed"]

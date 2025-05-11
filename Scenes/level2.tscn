@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://clmgirnlm3s2" path="res://Scenes/b_tree.tscn" id="20_sqe3g"]
 [ext_resource type="PackedScene" uid="uid://c6spy58fxemmg" path="res://Scenes/b_stone.tscn" id="21_8gohq"]
 [ext_resource type="Script" path="res://Scripts/levels.gd" id="22_lgtyr"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="23_eap2p"]
+[ext_resource type="PackedScene" uid="uid://8boxysjwmexf" path="res://Scenes/pause.tscn" id="23_eap2p"]
 [ext_resource type="PackedScene" uid="uid://bwae3fvao5iet" path="res://Scenes/checkpoint_manager.tscn" id="27_5l2id"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_phqrr"]
@@ -1788,6 +1788,7 @@ stretch_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("18_rr105")]
+visible = false
 position = Vector2(7, 205)
 
 [node name="Settings" parent="." instance=ExtResource("9_l1iaw")]
@@ -1899,7 +1900,7 @@ position = Vector2(944, 205)
 position = Vector2(112, 232)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("16_n11ms")]
-position = Vector2(335, 197)
+position = Vector2(319, 197)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("16_n11ms")]
 position = Vector2(552, 236)
@@ -1926,7 +1927,13 @@ position = Vector2(1493, 186)
 position = Vector2(1312, 246)
 
 [node name="Coin12" parent="Coins" instance=ExtResource("16_n11ms")]
-position = Vector2(2015, 280)
+position = Vector2(1789, 279)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("16_n11ms")]
+position = Vector2(377, 197)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("16_n11ms")]
+position = Vector2(1979, 279)
 
 [node name="Platforms" type="Node" parent="."]
 

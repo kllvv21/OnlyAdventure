@@ -1,0 +1,399 @@
+[gd_scene load_steps=24 format=3 uid="uid://74kx0vxxyaaf"]
+
+[ext_resource type="Script" path="res://Scripts/menubar.gd" id="1_b24vr"]
+[ext_resource type="AudioStream" uid="uid://be5edgsa4hhgj" path="res://Audio/click_audio.mp3" id="2_63y3p"]
+[ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="3_30d3u"]
+[ext_resource type="Texture2D" uid="uid://dbm2hic80bl8c" path="res://Sprites/1.png" id="4_y7yuy"]
+[ext_resource type="Texture2D" uid="uid://duu1anww13qly" path="res://Sprites/2.png" id="5_ks5ji"]
+[ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="6_2y0j0"]
+[ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="7_uil0h"]
+[ext_resource type="Script" path="res://Scripts/levels_menu.gd" id="8_co4aq"]
+[ext_resource type="Texture2D" uid="uid://byqr7bt04a25k" path="res://Sprites/Wood2x.png" id="8_l3ysi"]
+[ext_resource type="Texture2D" uid="uid://cidxp72pu4lh3" path="res://Sprites/Button_dis.png" id="10_a71n3"]
+[ext_resource type="Theme" uid="uid://cygd27c88adfn" path="res://Themes/button.tres" id="11_f12v0"]
+[ext_resource type="Texture2D" uid="uid://cgjy1n1q4l6uk" path="res://Sprites/Button.png" id="12_liivd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bx50"]
+atlas = ExtResource("8_l3ysi")
+region = Rect2(332, 4, 20, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scgd6"]
+atlas = ExtResource("8_l3ysi")
+region = Rect2(122, 4, 24, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxaym"]
+atlas = ExtResource("8_l3ysi")
+region = Rect2(272, 54, 24, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cobfg"]
+atlas = ExtResource("8_l3ysi")
+region = Rect2(182, 54, 24, 36)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h4llg"]
+texture = ExtResource("10_a71n3")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_erivw"]
+texture = ExtResource("10_a71n3")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wic5t"]
+texture = ExtResource("10_a71n3")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84sgp"]
+texture = ExtResource("10_a71n3")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ksoo8"]
+texture = ExtResource("10_a71n3")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_65my8"]
+texture = ExtResource("12_liivd")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mnosb"]
+texture = ExtResource("12_liivd")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b24vr")
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_63y3p")
+bus = &"SFX"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3_30d3u")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(80, 80)
+
+[node name="1" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+offset_left = -708.0
+offset_top = -274.0
+offset_right = -532.0
+offset_bottom = -182.0
+scale = Vector2(49.7875, 10.5398)
+texture = ExtResource("4_y7yuy")
+expand_mode = 2
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="CloudsLayout" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(80, 0)
+
+[node name="WhiteClouds" type="TextureRect" parent="ParallaxBackground/CloudsLayout"]
+texture_filter = 1
+offset_left = -371.0
+offset_top = 105.0
+offset_right = 2838.0
+offset_bottom = 281.0
+texture = ExtResource("5_ks5ji")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Clouds" type="TextureRect" parent="ParallaxBackground/CloudsLayout"]
+texture_filter = 1
+offset_left = -352.0
+offset_top = 52.0
+offset_right = 2840.0
+offset_bottom = 228.0
+texture = ExtResource("5_ks5ji")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="FarMountainLayout" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0, -2)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(80, 0)
+
+[node name="MountainFar2" type="TextureRect" parent="ParallaxBackground/FarMountainLayout"]
+texture_filter = 1
+offset_left = -360.0
+offset_top = 144.0
+offset_right = 2871.0
+offset_bottom = 320.0
+texture = ExtResource("6_2y0j0")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="MountainFar" type="TextureRect" parent="ParallaxBackground/FarMountainLayout"]
+texture_filter = 1
+offset_left = -356.0
+offset_top = 93.0
+offset_right = 2955.0
+offset_bottom = 269.0
+texture = ExtResource("6_2y0j0")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="NearMountainLayout" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(100, 0)
+motion_mirroring = Vector2(80, 0)
+
+[node name="MountainNear" type="TextureRect" parent="ParallaxBackground/NearMountainLayout"]
+texture_filter = 1
+offset_left = -349.0
+offset_top = 173.0
+offset_right = 2707.0
+offset_bottom = 349.0
+texture = ExtResource("6_2y0j0")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="MointainMiddle" type="TextureRect" parent="ParallaxBackground/NearMountainLayout/MountainNear"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -38.0
+offset_right = 3015.0
+offset_bottom = 138.0
+texture = ExtResource("6_2y0j0")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="GrassLayout" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(-4, 6)
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(80, 0)
+
+[node name="Grass" type="TextureRect" parent="ParallaxBackground/GrassLayout"]
+texture_filter = 1
+offset_left = -344.0
+offset_top = 199.0
+offset_right = 2744.0
+offset_bottom = 375.0
+texture = ExtResource("7_uil0h")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Grass1" type="TextureRect" parent="ParallaxBackground/GrassLayout/Grass"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = 35.0
+offset_right = 2782.0
+offset_bottom = 211.0
+scale = Vector2(1.03154, 0.939624)
+texture = ExtResource("7_uil0h")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Grass2" type="TextureRect" parent="ParallaxBackground/GrassLayout/Grass/Grass1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -1.0
+offset_top = 35.0
+offset_right = 3231.0
+offset_bottom = 211.0
+texture = ExtResource("7_uil0h")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Grass3" type="TextureRect" parent="ParallaxBackground/GrassLayout/Grass/Grass1/Grass2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 35.0
+offset_right = 3401.0
+offset_bottom = 211.0
+texture = ExtResource("7_uil0h")
+stretch_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("buttons_array")]
+script = ExtResource("8_co4aq")
+buttons_array = [NodePath("VBoxContainer/GridContainer/HBoxContainer/Level1"), NodePath("VBoxContainer/GridContainer/HBoxContainer/Level2"), NodePath("VBoxContainer/GridContainer/HBoxContainer/Level3"), NodePath("VBoxContainer/GridContainer/HBoxContainer2/Level4"), NodePath("VBoxContainer/GridContainer/HBoxContainer2/Level5"), NodePath("VBoxContainer/GridContainer/HBoxContainer2/Level6")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 2
+
+[node name="Control" type="Control" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="L" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_8bx50")
+
+[node name="E" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_scgd6")
+
+[node name="V" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_hxaym")
+
+[node name="E2" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_scgd6")
+
+[node name="L2" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_8bx50")
+
+[node name="S" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_cobfg")
+
+[node name="GridContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="Level1" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+theme = ExtResource("11_f12v0")
+text = "1"
+
+[node name="Level2" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+theme = ExtResource("11_f12v0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_h4llg")
+text = "2
+"
+
+[node name="Level3" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+theme = ExtResource("11_f12v0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_erivw")
+text = "3"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="Level4" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+theme = ExtResource("11_f12v0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_wic5t")
+text = "4
+"
+
+[node name="Level5" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+theme = ExtResource("11_f12v0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_84sgp")
+text = "5"
+
+[node name="Level6" type="Button" parent="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+theme = ExtResource("11_f12v0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ksoo8")
+text = "6
+"
+
+[node name="Menubar" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="Menu_button" type="Button" parent="CanvasLayer/VBoxContainer/Menubar"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("11_f12v0")
+text = "Back"
+
+[node name="Ach_button" type="Button" parent="CanvasLayer/VBoxContainer/Menubar"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("11_f12v0")
+text = "Achievements"
+
+[node name="Store_button" type="Button" parent="CanvasLayer/VBoxContainer/Menubar"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("11_f12v0")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/disabled = SubResource("StyleBoxTexture_65my8")
+text = "Store"
+
+[node name="Level_button" type="Button" parent="CanvasLayer/VBoxContainer/Menubar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+theme = ExtResource("11_f12v0")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mnosb")
+disabled = true
+text = "Levels
+"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer/Level1" to="CanvasLayer" method="_on_level_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer/Level2" to="CanvasLayer" method="_on_level_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer/Level3" to="CanvasLayer" method="_on_level_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer2/Level4" to="CanvasLayer" method="_on_level_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer2/Level5" to="CanvasLayer" method="_on_level_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/GridContainer/HBoxContainer2/Level6" to="CanvasLayer" method="_on_level_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Menubar/Menu_button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Menubar/Ach_button" to="." method="_on_ach_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Menubar/Store_button" to="." method="_on_store_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Menubar/Level_button" to="." method="_on_level_button_pressed"]

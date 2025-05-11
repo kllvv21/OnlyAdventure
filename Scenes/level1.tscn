@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://ciayyfouih3q4"]
+[gd_scene load_steps=42 format=4 uid="uid://ciayyfouih3q4"]
 
 [ext_resource type="Script" path="res://Scripts/levels.gd" id="1_7glb0"]
 [ext_resource type="Script" path="res://Scripts/parallax_background.gd" id="1_dnlpf"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://gprk4yvih3t7" path="res://Sprites/3.png" id="4_3wg8o"]
 [ext_resource type="Texture2D" uid="uid://cbic2fwv8xdou" path="res://Sprites/4.png" id="5_sqi0n"]
 [ext_resource type="PackedScene" uid="uid://ba5nt0lu5utt2" path="res://Scenes/coin.tscn" id="6_ptkp0"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="7_q4mbg"]
+[ext_resource type="PackedScene" uid="uid://8boxysjwmexf" path="res://Scenes/pause.tscn" id="7_q4mbg"]
 [ext_resource type="PackedScene" uid="uid://bp0ofmtvsqkjw" path="res://Scenes/manager.tscn" id="7_ymgak"]
 [ext_resource type="PackedScene" uid="uid://bhndin2nhp44b" path="res://Scenes/sm_tree.tscn" id="8_yqnxc"]
 [ext_resource type="Texture2D" uid="uid://dh8ymeu142m8b" path="res://Sprites/TilesNonSliced.png" id="8_yrjhg"]
@@ -24,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://djsnc40hummbo" path="res://Scenes/sm_stone.tscn" id="15_cianu"]
 [ext_resource type="PackedScene" uid="uid://c1pj5u6fyxswt" path="res://Scenes/chill-girlie.tscn" id="19_3b25a"]
 [ext_resource type="PackedScene" uid="uid://db5redmnjnu0n" path="res://Scenes/kill_zone.tscn" id="20_q22q3"]
-[ext_resource type="PackedScene" uid="uid://dekiqscd16n1u" path="res://Scenes/checkpoint.tscn" id="25_5rabw"]
 [ext_resource type="PackedScene" uid="uid://bwae3fvao5iet" path="res://Scenes/checkpoint_manager.tscn" id="26_vk66a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1xph"]
@@ -1299,6 +1298,7 @@ stretch_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("19_3b25a")]
+visible = false
 position = Vector2(8, 226)
 
 [node name="Settings" parent="." instance=ExtResource("3_big1i")]
@@ -1408,6 +1408,12 @@ position = Vector2(209, 304)
 [node name="Coin2" parent="Coins" instance=ExtResource("6_ptkp0")]
 position = Vector2(714, 356)
 
+[node name="Coin5" parent="Coins" instance=ExtResource("6_ptkp0")]
+position = Vector2(1706, 313)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("6_ptkp0")]
+position = Vector2(1298, 363)
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource("11_116ni")]
@@ -1426,12 +1432,6 @@ shape = SubResource("RectangleShape2D_lqplh")
 
 [node name="KillZone" parent="WorldBoundaries" instance=ExtResource("20_q22q3")]
 position = Vector2(708, 487)
-
-[node name="Checkpoint" parent="." instance=ExtResource("25_5rabw")]
-position = Vector2(885, 355)
-
-[node name="CheckpointManager" parent="." instance=ExtResource("26_vk66a")]
-unique_name_in_owner = true
 
 [node name="EndLevel" type="Area2D" parent="."]
 

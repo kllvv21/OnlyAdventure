@@ -11,6 +11,8 @@ func _on_node_2d_body_entered(body: Node2D) -> void:
 		var jump_threshold = parent.get_node("CollisionShape2D").shape.extents.y * 1.8
 		if y_delta > jump_threshold:
 			ProgressManager.add_kill()  
+			if ProgressManager.get_kill() >= 10:
+				AchievementManager.unlock("bloody_murderer")
 			parent.queue_free()
 			body.bounce()
 		else:

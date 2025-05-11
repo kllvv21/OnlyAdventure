@@ -1,7 +1,7 @@
 extends Sprite2D
 
 @onready var parent = $".."  
-@onready var player = get_node_or_null("/root/MainMenu/Player") as Player
+var player
 
 var is_pressed = false
 var touch_index = -1  
@@ -12,7 +12,14 @@ var touch_index = -1
 func _ready() -> void:
 	MaxLen *= parent.scale.x 
 
+func get_player() -> Player:
+	var player = get_node_or_null("/root/MainMenu/Player")
+	if player and is_instance_valid(player):
+		return player as Player
+	return null
+
 func _input(event):
+	player = get_player()
 	if event is InputEventScreenTouch:
 		if event.pressed and global_position.distance_to(event.position) <= MaxLen:
 			is_pressed = true
